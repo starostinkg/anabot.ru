@@ -1,0 +1,48 @@
+<div class="actual_body paper_body">
+<hr><a href="http://forum.anabot.ru/<?php echo (int)$_GET['f']; ?>/<?php echo (int)$_GET['t']; ?>/">Смотреть отзывы</a>
+<br>Оставить отзыв:
+
+<form action="http://forum.anabot.ru/index.php?" method="post" class="formStyle" id="postMsg">
+<table class="forums" style="width:100%">
+<tr><td class="caption2"><a id="newreply"></a>
+
+Имя/псевдоним: <input type="text" size="18" maxlength="40" name="user_usr" class="textForm" tabindex="3">
+<input type="password" size="18" maxlength="32" name="user_pwd" class="textForm" tabindex="4" value="" style="display:none">
+<input type="hidden" name="mode" value="login">
+<input type="hidden" name="queryStr" value="action=vthread&amp;forum=<?php echo (int)$_GET['f']; ?>&amp;topic=<? echo (int)$_GET['t']; ?>&amp;page=0">
+
+</td></tr>
+<tr>
+<td>
+<table style="width:100%">
+<tr>
+<td class="pform" style="border-top:0px;width:70%">
+ <textarea name="postText" id="postText" style="width:70%; height:200px;" class="textForm postingForm" tabindex="2" cols="1" rows="1"></textarea>
+</td>
+</tr>
+</table>
+ 
+</td>
+</tr>
+
+
+<tr>
+<td class="pform">
+<script type="text/javascript">
+<!--
+document.write('<input type="button" name="subbut" value="Отправить сообщение" class="inputButton" tabindex="5" onClick="submitForm();">');
+//-->
+</script>
+<noscript><input type="submit" value="Отправить сообщение" class="inputButton" tabindex="5"></noscript>
+<input type="hidden" name="action" value="pthread">
+<input type="hidden" name="forum" value="<?php echo (int)$_GET['f']; ?>">
+<input type="hidden" name="topic" value="<?php echo (int)$_GET['t']; ?>">
+<input type="hidden" name="anchor" value="">
+
+</td>
+</tr>
+</table>
+
+</form>
+<iframe style="width:0px; height:0px; display:none;" src="http://forum.anabot.ru/?guest_book=1"></iframe>
+</div>

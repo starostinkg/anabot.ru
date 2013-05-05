@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+ <!-- header -->
+ <?php require_once $header_path; #/conf/main_conf.php ?>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title><?php
+   echo empty($meta['mtitle']) ? $meta['title'] : $meta['mtitle'];
+   if ($meta['menu'] == '[paper]') echo ' ::: Студенческая газета РХТУ Альтернативный Менделеевец';
+  ?></title>
+  <meta name="description" content="<?php echo $meta['description']; ?>">
+  <meta name="keywords" content="<?php echo $meta['keywords']; ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo $meta['css']; ?>?c=041112">
+  <script type="text/javascript">
+   var js_flask_off = <?php echo isset($_COOKIE['js_flask_off']) ? '1' : '0'; ?>;
+   if (js_flask_off == 0) document.write('<link rel="stylesheet" type="text/css" href="/css/js_flask.css">');
+   document.write('<link rel="stylesheet" type="text/css" href="/css/js.css">');
+  </script>
+  <!--[if lte IE 6]>
+   <style type="text/css">
+    .img_right_menu {
+     border-top-color: #000000;
+     filter:chroma(color=#000000);
+    }
+   </style>
+  <![endif]-->
+  
+ </head>
+ <body>
+ <!--[if lte IE 6]>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <![endif]-->
+ <div class="logo">
+  <b class="logo_text">Анабот:&nbsp;</b>
+  <div class="logo_img">
+<?php 
+
+if ($meta['menu'] != '/') { ?>
+   <a href="/"><img class="logo_img" src="/img/logo.jpg" alt="anabot"></a>
+<?php }
+else { ?>
+<img class="logo_img" src="/img/logo.jpg" alt="anabot">
+<?php }?>
+  </div>
+ </div>
+ <div class="head">
+  <b class="head_title"><?php echo $meta['title']; ?></b> <br>
+  <div class="head_in"><?php echo $meta['head']; ?></div>
+ </div>
+ <div class="menu_top">
+<?php 
+
+if ($meta['menu'] == '/') { ?>
+  <div class="menu_top_unit">
+    <img class="img_dot" src="/img/dot.gif" alt="Дома" title="Сейчас вы на главной странице"><img class="img_big" src="/img/home.gif" alt="Дома" title="Сейчас вы на главной странице">
+	<span class="js_off_menu">На главной</span>
+  </div>
+<?php } else { ?>
+  <div class="menu_top_unit">
+   <a href="/" class="menu_top">
+    <img class="img_dot" src="/img/dot.gif" alt="На главную"><img class="img_small" src="/img/home.gif" alt="На главную"><br><span class="url">Вернуться <br>на главную</span></a>
+  </div>
+<?php }
+
+if ($meta['menu'] == '/files/') { ?>
+  <div class="menu_top_unit">
+    <img class="img_dot" src="/img/dot.gif" alt="Файловый архив РХТУ" title="Сейчас вы в файловом архиве РХТУ"><img class="img_big" src="/img/files.gif" alt="Файловый архив РХТУ" title="Сейчас вы в файловом архиве РХТУ">
+	<span class="js_off_menu">Файлы</span>
+  </div>
+<?php } else { ?>
+  <div class="menu_top_unit">
+   <a href="/files/" class="menu_top">
+    <img class="img_dot" src="/img/dot.gif" alt="Файловый архив РХТУ"><img class="img_small" src="/img/files.gif" alt="Файловый архив РХТУ"><br><span class="url">Файлы</span></a>
+  </div>
+<?php }
+
+if ($meta['menu'] == '/lab/') { ?>
+  <div class="menu_top_unit">
+    <img class="img_dot" src="/img/dot.gif" alt="Лаборатория" title="Вы у входа в лабораторию"><img class="img_big" src="/img/lab.gif" alt="Лаборатория" title="Вы у входа в лабораторию">
+	<span class="js_off_menu">Лаборатория</span>
+  </div>
+<?php } else { ?>
+  <div class="menu_top_unit">
+   <a href="/lab/" class="menu_top">
+    <img class="img_dot" src="/img/dot.gif" alt="Лаборатория"><img class="img_small" src="/img/lab.gif" alt="Лаборатория"><br>
+    <span class="url">Лаборатория</span>
+   </a>
+  </div>
+<?php }
+
+if ($meta['menu'] == '/paper/') { ?>
+  <div class="menu_top_unit">
+    <img class="img_dot" src="/img/dot.gif" alt="Газета Альтернативный Менделеевец" title="Сейчас вы читаете газетку..."><img class="img_big" src="/img/paper.gif" alt="Газета Альтернативный Менделеевец" title="Сейчас вы читаете газетку..."><br>
+	<span class="js_off_menu">Газета</span>
+  </div>
+<?php } else { ?>
+  <div class="menu_top_unit">
+   <a href="/paper/" class="menu_top" title="в рулонах и без текста :)">
+    <img class="img_dot" src="/img/dot.gif" alt="Газета Альтернативный Менделеевец"><img class="img_small" src="/img/paper.gif" alt="Газета Альтернативный Менделеевец"><br>
+    <span class="url">Газета</span>
+   </a>
+  </div>
+<?php }
+
+if ($meta['menu'] == '/news/') { ?>
+  <div class="menu_top_unit">
+    <img class="img_dot" src="/img/dot.gif" alt="Позитивные новости" title="Заряжаемся позитивом! =)"><img class="img_big" src="/img/goodNews.gif" alt="Позитивные новости" title="Заряжаемся позитивом! =)"><br>
+	<span class="js_off_menu">Позитивные<br>новости</span>
+  </div>
+<?php } else { ?>
+  <div class="menu_top_unit">
+   <a href="#/news/" class="menu_top"  style="color: gray;" onclick="alert('В разработке, скоро появится ;)');">
+    <img class="img_dot" src="/img/dot.gif" alt="Позитивные новости"><img class="img_small" src="/img/goodNews.gif" alt="Позитивные новости"><br>
+    <span class="url">Позитивные<br>новости</span>
+   </a>
+  </div>
+<?php } ?>
+  <div class="menu_top_unit">
+   <a href="http://forum.anabot.ru/" class="menu_top">
+    <img class="img_dot" src="/img/dot.gif" alt="Форум"><img class="img_small" src="/img/forum.gif" alt="Форум"><br>
+    <span class="url">Форум</span>
+   </a>
+  </div>
+ </div>

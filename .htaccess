@@ -1,0 +1,19 @@
+php_value output_buffering Off
+RewriteEngine on 
+RewriteRule ^guest/?$ http://forum.anabot.ru/6/86/ [R=301]
+RewriteRule ^polza/?$ /lab/ [R=301]
+RewriteRule ^polza/bob.*$ /lab/calc/ [R=301]
+RewriteRule ^gazeta/(.*)$ /paper/$1 [R=301]
+RewriteRule ^stats/$ /awstats/awstats.pl?config=anabot.ru [L,PT]
+RewriteRule ^stats/awstats.pl(.*) /awstats/awstats.pl?config=anabot.ru$1 [QSA,L,PT]
+RewriteRule ^files/disk.php$ http://files.anabot.ru [R=301]
+RewriteRule ^files/download.php.*$ http://files.anabot.ru [R=301]
+
+Options +FollowSymLinks
+RewriteCond %{HTTP_HOST} ^podpol.anabot.ru$ [OR]
+RewriteCond %{HTTP_HOST} ^mbl.anabot.ru$ [OR]
+RewriteCond %{HTTP_HOST} ^www.anabot.ru$ [OR]
+RewriteCond %{HTTP_HOST} ^www.interl.aaanet.ruforum.anabot.ru$
+RewriteRule ^(.*)$ http://anabot.ru/$1 [R=301,L]
+
+ErrorDocument 404 /errors/404.php
