@@ -16,4 +16,6 @@ RewriteCond %{HTTP_HOST} ^www.anabot.ru$ [OR]
 RewriteCond %{HTTP_HOST} ^www.interl.aaanet.ruforum.anabot.ru$
 RewriteRule ^(.*)$ http://anabot.ru/$1 [R=301,L]
 
+RewriteRule ^-(.*)$ /b/index.php?nick=$1&title=Микроблог
+
 ErrorDocument 404 /errors/404.php
