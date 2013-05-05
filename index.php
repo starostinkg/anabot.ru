@@ -64,4 +64,5 @@ include ROOT . 'inc/header_common.htm';
 </table>
 <div class="footer_ie">&nbsp;</div>
 <!-- footer -->
+
 <?php include ROOT . 'inc/footer_common.htm'; ?>
