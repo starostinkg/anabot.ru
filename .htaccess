@@ -19,3 +19,5 @@ RewriteRule ^(.*)$ http://anabot.ru/$1 [R=301,L]
 RewriteRule ^-(.*)$ /b/index.php?nick=$1&title=Микроблог
 
 ErrorDocument 404 /errors/404.php
+
+
