@@ -1,0 +1,99 @@
+-0 мин
+04.11 в 18-00.
++ 60 мин
+ в 19-35
++ 30 мин
+ в 20-30
++ 60 мин
+ в 01-00
++ 100 мин
+ в 03-30
++ 60 мин
+ в 15-54
++ 10 мин
+ в 18-40
++ 60 мин
+http://www.weblancer.net/projects/449661.html
+
+
+http://vk.com/videos-1444878
+==
+http://vk.com/video?gid=1444878
+
+
+----------
+
+
+POST /al_video.php HTTP/1.1
+Host: vk.com
+Cookie: remixsid=35e18167cff000db83c70c909bbbf6508992f802915bbe9a34a0af9a7843e2e07807;
+Connection: close
+Content-Length: 51
+Content-Type: application/x-www-form-urlencoded
+X-Requested-With: XMLHttpRequest
+Content-Transfer-Encoding: binary
+
+act=load_videos_silent&al=1&offset=0&oid=95636180
+
+
+-------
+
+POST /al_video.php HTTP/1.1
+Host: vk.com
+Cookie: remixsid=34f42c4de5bf13626bdbc5e54b3b1f01b1f801e38098cfd8c59b3872804989719631;
+Connection: close
+Content-Length: 51
+Content-Type: application/x-www-form-urlencoded
+X-Requested-With: XMLHttpRequest
+Content-Transfer-Encoding: binary
+
+act=video_embed_box&al=1&oid=-1444878&vid=162203527
+
+----------
+
+
+
+==> [-1444878,
+ 162249408,
+'http://cs12772.userapi.com/u77752283/video/s_d10f8c94.jpg',
+ '—партак: Ѕоги јрены | Spartacus: Gods of the Arena - 1 сезон 2 сери€ [ќзвучка: LostFilm]',
+ '',
+ '4 окт€бр€ 2011',
+ 40351280,
+ 1,
+ 0,
+ '55:08',
+ '1']
+
+==> 
+1 - номер видео
+6 - номер альбома
+
+--------------
+
+
+
+
+
+
+
+login.vk.com
+
+POST /?act=login HTTP/1.1
+Host: login.vk.com
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 92+++++++++++
+
+act=login&role=al_frame&expire=&captcha_sid=&captcha_key=&_origin=http%3A%2F%2Fvk.com&email=sprozin%40anabot.ru&pass=ppcd2539GPNR
+
+==> Location: http://vk.com/login.php?act=slogin&to=&s=1&hash=***********************
+
+
+------------
+
+GET /login.php?act=slogin&to=&s=1&hash=f5d92c41d334b5304b3be9c1fb447a4c HTTP/1.1
+Host: vk.com
+Connection: close
+
+==> Set-Cookie: remixsid=**************************************
