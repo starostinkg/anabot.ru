@@ -1,0 +1,1 @@
+<?phpdefine ('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/');include ROOT . 'conf/main_conf.php';include ROOT . 'inc/header_common.htm';?><!-- footer --><?php include ROOT . 'inc/footer_common.htm'; ?>
