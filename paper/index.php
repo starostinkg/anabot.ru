@@ -81,7 +81,7 @@ include ROOT . 'inc/header_common.htm';
   </td>
   <td class="border_right">
   <img src="/img/positive.gif" alt="Позитивые новости" class="img_right_menu">
-  <div class="border_right_menu" style="padding-top: 0px;">
+  <div class="border_right_menu2line">
    <a class="border_right_link" href="#/news/"  style="color: gray;" onclick="alert('В разработке, скоро появится ;)');">Новости мира<br>
    от  01.09.2012</a>
   </div>
@@ -97,8 +97,8 @@ include ROOT . 'inc/header_common.htm';
   </div>
   <br class="break">
   <img src="/img/bug.gif" alt="Единственный баг на сайте" title="Единственный баг на сайте" class="img_right_menu">
-  <div class="border_right_menu" style="padding-top: 0px;">
-   <a class="border_right_link" href="#/forhack.php" style="color: gray;" onclick="alert('В разработке, скоро появится ;)');">Кулхацкерам<br>посвещается...</a><br>
+  <div class="border_right_menu2line">
+   <a class="border_right_link" href="/forhack.php">Кулхацкерам<br>посвещается...</a><br>
   </div>
   </td>
  </tr>

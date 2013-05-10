@@ -35,8 +35,10 @@ window.onload = function() {
  var dot = gpnrGetClass("img_dot", "img");
  for (var i = 0; i < h.length; i++){
   for (var j = 0; j < h[i].length; j++){
-   dot[j].style.display = "none";
-   if (dot[j+1]) dot[j+1].style.display = "none";
+   if (dot[j] != undefined) {
+    dot[j].style.display = "none";
+    if (dot[j+1]) dot[j+1].style.display = "none";
+   }
    h[i][j].style.display = "inline";
    ////
    //костыль для IE
