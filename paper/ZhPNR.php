@@ -83,7 +83,7 @@ P.S. Пожалуйста, не&nbsp;относитесь ко&nbsp;всему �
 <i>2009 год</i>
    </div>
   <!-- comment form -->
-  <?php include ROOT . 'inc/comment_paper.htm'; ?>
+  <?php include ROOT . 'inc/paper/comment.htm'; ?>
   <script type="text/javascript" src="/js/paper.js"></script>
   </td>
   <td class="paper_right">

@@ -63,7 +63,7 @@ include ROOT . 'inc/header_common.htm';
 2. Химия и&nbsp;жизнь.&nbsp;1969. &#8470;&nbsp;3. С. 24.
    </div>
   <!-- comment form -->
-  <?php include ROOT . 'inc/comment_paper.htm'; ?>
+  <?php include ROOT . 'inc/paper/comment.htm'; ?>
   <script type="text/javascript" src="/js/paper.js"></script>
   </td>
   <td class="paper_right">

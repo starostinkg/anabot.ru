@@ -1,4 +1,4 @@
-<?
+<?php
 //Подкласс файлового архива
 class Cls_files {
  static $style_files;
