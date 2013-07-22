@@ -7,4 +7,3 @@ Disallow: /gazeta/MifyFizximii.php
 Disallow: /gazeta/ChtoEst_Real_nost_2.php
 Disallow: /gazeta/JekologovRasformirujut.php
 Allow: /
-
