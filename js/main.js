@@ -74,6 +74,7 @@ window.onload = function() {
  }
  ////
  if(typeof f_flasks == 'function') f_flasks();
+ if(typeof kvak == 'function') kvak();
 }
 
 ////

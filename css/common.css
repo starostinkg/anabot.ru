@@ -176,6 +176,12 @@ LI.new {
  height:48px;
 }
 
+.kvak_head {
+ top:175px;
+ position:relative;
+ width:82%;
+ margin:0px auto;
+}
 
 .table_actual {
  background-image:url("/img/grad_table.jpg");
@@ -187,6 +193,10 @@ LI.new {
  max-width: 900px;
  margin:0px auto;
 
+}
+
+.kva {
+ max-width: 90000px;
 }
 
 .border_left {
@@ -895,4 +905,47 @@ text-shadow: -10px 10px 0px #FF9933,
  margin-left: 15px;
  margin-top: 5px;
  margin-bottom: 5px;
+}
+
+
+
+
+.kvak {
+ line-height: normal;
+ overflow: hidden;
+ max-height: 112px;
+ height: expression( this.scrollHeight > 111 ? "112px" : "auto" );
+ padding-left: 10px;
+ font-size: 12pt;
+ width: 95%;
+}
+
+.kvak_t, .kvak_t TABLE {
+width:100%;
+border-collapse:collapse;
+border-spacing:0;
+line-height: 0px;
+}
+
+.kvak_t TD {
+ padding:0px;
+}
+
+.kvak_tit {
+ z-index:5; 
+ position: relative; 
+ top: 13px;
+ left: 3%;
+}
+
+.kvak_grad {
+ z-index:10; 
+ position: relative; 
+ top: -99999px;
+ background-image: url("/kvak/img/grad.png");
+ height: 40px;
+}
+
+.png24 {
+ behavior: url("/css/pngbehavior.htc");
 }

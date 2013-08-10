@@ -2,17 +2,19 @@
 define ('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/');
 include ROOT . 'conf/main_conf.php';
 include ROOT . 'Cls/Cls_Kvak.php';
+include ROOT . 'components/kvak/index.php';
 include ROOT . 'inc/header_common.htm';
 
 
 ?>
 
+<script type="text/javascript" src="/js/kvak.js"></script>
 
 <br class="break0">
-
+<div class="kvak_head"><?php echo $pages; ?></div>
 <!--Список КВА -->
-<?php include ROOT . 'components/kvak/index.php'; ?>
-<table class="table_actual">
+
+<table class="table_actual kva">
  <tr>
   <td class="border_left_top">
    <div class="actual_title" id="actual_title">
@@ -23,28 +25,26 @@ include ROOT . 'inc/header_common.htm';
   </td>
  </tr>
  <tr>
-  <td class="border_left">
+  <td class="<?php echo $main_css;?>_left">
    <hr>
    <div class="actual_body paper_body">
-ква<br>
-<?php echo $kvak_body; ?>
-<br>ква
-<br>ква
-<br>ква
+<?php eval($kvak_body); ?>
    </div>
   </td>
   
-  <td class="border_right">
+  <td class="<?php echo $main_css;?>_right">
 
 <?php
- echo $f[13]->kvak();
- echo $f[16]->kvak();
- echo $f[10]->kvak();
- echo $f[19]->kvak();
- echo $f[20]->kvak();
- echo $f[14]->kvak();
- echo $f[22]->kvak();
- echo $f[12]->kvak();
+ if ($main_css == "border") {
+  echo $f[13]->kvak();
+  echo $f[16]->kvak();
+  echo $f[10]->kvak();
+  echo $f[19]->kvak();
+  echo $f[20]->kvak();
+  echo $f[14]->kvak();
+  echo $f[22]->kvak();
+  echo $f[12]->kvak();
+ }
 ?>
 
   </td>

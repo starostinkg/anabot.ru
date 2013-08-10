@@ -114,11 +114,19 @@ if ($meta['menu'] == '/news/') { ?>
     <span class="url">Позитивные<br>новости</span>
    </a>
   </div>
-<?php } ?>
+<?php }
+
+if ($meta['menu'] == '/kvak/' && empty($_SERVER['QUERY_STRING'])) { ?>
   <div class="menu_top_unit">
-   <a href="http://forum.anabot.ru/" class="menu_top">
-    <img class="img_dot" src="/img/dot.gif" alt="Форум"><img class="img_small" src="/img/forum.gif" alt="Форум"><br>
-    <span class="url">Форум</span>
+    <img class="img_dot" src="/img/dot.gif" alt="Квак"><img class="img_big" src="/img/kvak.gif" alt="Квак"><br>
+    <span class="js_off_menu">Квак<br>(тихий омут)</span>
+  </div>
+<?php } else { ?>
+  <div class="menu_top_unit">
+   <a href="/kvak/" class="menu_top">
+    <img class="img_dot" src="/img/dot.gif" alt="Квак"><img class="img_small" src="/img/kvak.gif" alt="Квак"><br>
+    <span class="url">Квак<br>(тихий омут)</span>
    </a>
   </div>
+<?php } ?>
  </div>
