@@ -11,7 +11,7 @@ include ROOT . 'inc/header_common.htm';
 <script type="text/javascript" src="/js/kvak.js"></script>
 
 <br class="break0">
-<div class="kvak_head"><?php echo $pages; ?></div>
+<div class="kvak_head" <?php echo empty($align_topic) ? '' : $align_topic; ?>><?php echo empty($forum_top) ? '' : $forum_top; echo empty($kvak_pages) ? '&nbsp;' : $kvak_pages; ?></div>
 <!--Список КВА -->
 
 <table class="table_actual kva">
@@ -21,7 +21,7 @@ include ROOT . 'inc/header_common.htm';
 	<?php echo $kvak_title; ?>
    </div>
   </td>
-  <td class="border_right_top">&nbsp;
+  <td class="<?php echo $main_css; ?>_right_top">&nbsp;
   </td>
  </tr>
  <tr>
@@ -44,6 +44,8 @@ include ROOT . 'inc/header_common.htm';
   echo $f[14]->kvak();
   echo $f[22]->kvak();
   echo $f[12]->kvak();
+  echo $f[23]->kvak();
+  echo $f[11]->kvak();
  }
 ?>
 
@@ -53,11 +55,12 @@ include ROOT . 'inc/header_common.htm';
   <td class="border_left_bottom">
    &nbsp;
   </td>
-  <td class="border_right_bottom">&nbsp;
+  <td class="<?php echo $main_css; ?>_right_bottom">&nbsp;
   </td>
  </tr>
 </table>
 
 <div class="footer_ie">&nbsp;</div>
+<?php if (isset($footer_kva)) echo $footer_kva; ?>
 <!-- footer -->
 <?php include ROOT . 'inc/footer_common.htm'; ?>

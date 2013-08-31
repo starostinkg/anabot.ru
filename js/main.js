@@ -25,8 +25,13 @@ function gpnrGetClass(cls, tag) {
   return fake;
  }
 }
+//class="footer"
+var onload_timeout = setTimeout('window_onload()', 100);
 
-window.onload = function() {
+function window_onload() {
+ var tmp = gpnrGetClass("footer");
+ if (tmp[0].className == "fake_class_by_anabot_ru") return false;
+ else clearTimeout(onload_timeout);
  var red_button;
  red_button = gpnrGetClass("red_button", "table");
  red_button[0].style.display = 'block';

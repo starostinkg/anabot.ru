@@ -27,10 +27,12 @@ DIV.menu_top {
  width:100%;
 }
 
+
 A.menu_top {
  font-size:10.5pt;
  color:#009933;
  text-decoration: none;
+ border:0px;
 }
 
 A.menu_lab {
@@ -179,9 +181,17 @@ LI.new {
 .kvak_head {
  top:175px;
  position:relative;
- width:82%;
+ width:95%;
  margin:0px auto;
 }
+
+.kvak_footer {
+ position:relative;
+ width:92%;
+ margin:0px auto;
+}
+
+
 
 .table_actual {
  background-image:url("/img/grad_table.jpg");
@@ -193,6 +203,10 @@ LI.new {
  max-width: 900px;
  margin:0px auto;
 
+}
+
+TABLE.kva {
+width: 95%;
 }
 
 .kva {
@@ -245,12 +259,22 @@ LI.new {
  background-position: 0px 0px;
 }
 
+.paper_right_top{
+ height:14px;
+ font-size:1px;
+}
+
 .border_right_bottom{
  height:14px;
  font-size:1px;
  background-image:url("/img/grad_right_bottom.jpg");
  background-repeat: no-repeat;
  background-position: 0px 0px;
+}
+
+.paper_right_bottom{
+ height:14px;
+ font-size:1px;
 }
 
 .actual_title {
@@ -262,7 +286,6 @@ LI.new {
 }
 
 .actual_body {
- min-height: 200px;
  width: 100%;
  text-align: left;
 }
@@ -662,7 +685,6 @@ TABLE.red_button  TD.red_button_04{
  width: 1px;
  padding-left: 5px;
  vertical-align: top;
- background-image:url("/img/grad_right.jpg");
  background-repeat: repeat-y;
  background-position: 0px 0px;
 }
@@ -948,4 +970,193 @@ line-height: 0px;
 
 .png24 {
  behavior: url("/css/pngbehavior.htc");
+}
+
+.comments_kva {
+ margin-left: 10%;
+ background-color: #fafafa;
+ width: 88%;
+ padding: 3px;
+ padding-left: 10px;
+ min-height: 70px;
+ height: expression( this.scrollHeight < 100 ? "100px" : "auto" );
+ border-right: 1px dotted;
+ border-bottom: 1px dotted;
+ border-color: orange;
+}
+
+.comment_kva_box {
+ padding-top: 5px;
+ width:99%;
+ margin:0px auto;
+}
+
+.avatar {
+ word-wrap: break-word;
+ float: left;
+ width: 10%;
+ height: 70px;
+ /*border: 1px solid red;*/
+ background-image: url("/kvak/img/tail_post.gif");
+ background-repeat: no-repeat;
+ background-position: 100% -20px;
+}
+
+.avatar div {
+ text-align: right;
+ padding-right: 25px;
+
+}
+
+.avatar img {
+ padding-right: 25px;
+}
+
+.hl {
+ background-color: #EEEEEE;
+ border-left: 7px solid #F6F8EA;
+ color: #000000;
+ font-family: Courier,Courier New;
+ font-size: 11pt;
+ margin-left: 5pt;
+ padding: 4px;
+}
+
+span.kva_pages  {
+ color:#000000;
+ font-size: 10pt;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-weight: bold;
+}
+
+div.kva_pages  {
+ font-size: 10pt;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ color:#009933;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10pt;
+ text-decoration: none;
+ width: 60%;
+}
+
+.kva_pages a:link, .kva_pages  a:visited, .kva_pages  a:active  {
+ color:#009933;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10pt;
+ text-decoration: none;
+}
+
+#first_fade {
+ display: none;
+ text-align: center;
+ margin: 5px;
+}
+
+#first_fade span {
+ border-bottom: 1px dashed #009933;
+ cursor: pointer;
+}
+
+.post_top {
+ font-size: 9pt;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ border-bottom: 1px solid #CCCCCC;
+ color: #666666;
+}
+
+
+.forum_top a:link, .forum_top a:visited, .forum_top a:active  {
+ color:#009933;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10pt;
+ text-decoration: none;
+ float: left;
+}
+
+.forum_lbottom a:link, .forum_lbottom a:visited, .forum_lbottom a:active  {
+ color:#009933;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10pt;
+ text-decoration: none;
+}
+
+.forum_lbottom {
+ margin-top: 5px;
+}
+
+.forum_bottom {
+ float: left;
+ margin-left: 2%;
+}
+
+.vgroup {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-style: italic;
+ font-size: 8pt;
+ padding-right: 25px;
+}
+
+.foright {
+ float: right;
+ width: 45px;
+ text-align: right;
+}
+
+.foall a:link, .foall a:visited, .foall a:active {
+ color:#666666;
+ vertical-align: super;
+ font-size: 10pt;
+}
+
+.nkva a:link, .nkva a:visited, .nkva a:active {
+ color: #AAAAAA;
+ vertical-align: super;
+ font-size: 10pt;
+ display: none;
+}
+
+.spoiler_tag_title {
+ border: 1px dashed #000000;
+ padding: 2px;
+ cursor: s-resize;
+}
+
+.spoiler_tag_body {
+ border: 1px dashed #000000;
+ border-top: 0px;
+}
+
+a.kva_pg:link, a.kva_pg:visited, a.kva_pg:active  {
+ color: orange;
+ font-size: 11pt;
+}
+
+.auth_form {
+ margin: 0px;
+ padding: 0px;
+}
+
+.login {
+ width: 125px;
+}
+
+.password {
+ width: 105px;
+}
+
+.auth {
+ width: 48px;
+ padding-left: 0px;
+ padding-right: 0px;
+}
+
+.reg {
+ width: 100px;
+ padding-left: 0px;
+ padding-right: 0px;
+}
+
+.postText {
+ width: 99%;
+ height: 200px;
 }
