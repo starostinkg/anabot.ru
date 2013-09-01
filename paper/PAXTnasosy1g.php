@@ -17,7 +17,7 @@ include ROOT . 'inc/header_common.htm';
     О поршневых и плунжерных насосах, или как не учить картинки
    </div>
   </td>
-  <td class="border_right_top">&nbsp;
+  <td class="paper_right_top">&nbsp;
   </td>
  </tr>
  <tr>

@@ -17,7 +17,7 @@ include ROOT . 'inc/header_common.htm';
     К вопросу о точности тест-систем для определения NH<span class="sub1">3</span> / NH<span class="sub1">4</span><span class="sup2">+</span>
    </div>
   </td>
-  <td class="border_right_top">&nbsp;
+  <td class="paper_right_top">&nbsp;
   </td>
  </tr>
  <tr>

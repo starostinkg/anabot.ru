@@ -17,7 +17,7 @@ include ROOT . 'inc/header_common.htm';
     Аспирантура в РХТУ: миф или кривые руки?
    </div>
   </td>
-  <td class="border_right_top">&nbsp;
+  <td class="paper_right_top">&nbsp;
   </td>
  </tr>
  <tr>

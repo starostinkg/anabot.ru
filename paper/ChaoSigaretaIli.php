@@ -16,7 +16,7 @@ include ROOT . 'inc/header_common.htm';
     &laquo;Чао, сигарета&raquo;&nbsp;&mdash; поддержка наркомана или наркоторговца?
    </div>
   </td>
-  <td class="border_right_top">&nbsp;
+  <td class="paper_right_top">&nbsp;
   </td>
  </tr>
  <tr>

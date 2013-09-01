@@ -16,7 +16,7 @@ include ROOT . 'inc/header_common.htm';
     Студенты и перепись населения &mdash; кто виноват и чем это пахнет?
    </div>
   </td>
-  <td class="border_right_top">&nbsp;
+  <td class="paper_right_top">&nbsp;
   </td>
  </tr>
  <tr>

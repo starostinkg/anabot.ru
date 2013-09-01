@@ -16,7 +16,7 @@ include ROOT . 'inc/header_common.htm';
     Самодельная магнитная мешалка. Часть 2 (практическая)
    </div>
   </td>
-  <td class="border_right_top">&nbsp;
+  <td class="paper_right_top">&nbsp;
   </td>
  </tr>
  <tr>

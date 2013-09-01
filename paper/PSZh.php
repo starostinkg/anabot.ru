@@ -17,7 +17,7 @@ include ROOT . 'inc/header_common.htm';
     ПСЖ, академ, отчисление: кратко о главном 
    </div>
   </td>
-  <td class="border_right_top">&nbsp;
+  <td class="paper_right_top">&nbsp;
   </td>
  </tr>
  <tr>

@@ -16,7 +16,7 @@ include ROOT . 'inc/header_common.htm';
    <div class="actual_title">
 &laquo;Нашествие&raquo;: Как отдыхать, чего нельзя и&nbsp;как превратить &laquo;нельзя&raquo; в&nbsp;&laquo;можно&raquo; </div>
 </td>
-<td class="border_right_top"> 
+<td class="paper_right_top"> 
 </td>
 </tr>
 <tr>
