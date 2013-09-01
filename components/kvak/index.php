@@ -142,7 +142,7 @@ $main_css = "border";
 	$post_text = str_replace(array("\r", "\r\n"), '<br>', $post_text);
     mysql_query("INSERT INTO `posts` 
 	            (`forum_id`, `topic_id`, `poster_name`, `post_text`, `post_time`, `poster_ip`, `post_status`) 
-	             VALUES ('" . (int)$_GET['f'] . "', '" . (int)$_GET['t'] . "', '" . mysql_real_escape_string($f[$_GET['f']]->user) . "', '" . mysql_real_escape_string($post_text) . "', now(), '" . $GLOBALS['ip'] . "' , '');") or errDB($link);
+	             VALUES ('" . (int)$_GET['f'] . "', '" . (int)$_GET['t'] . "', '" . mysql_real_escape_string($f[$_GET['f']]->user) . "', '" . mysql_real_escape_string($post_text) . "', now(), '" . $GLOBALS['ip'] . "' , '0');") or errDB($link);
 	$link = mysql_query ("SELECT * FROM `posts` WHERE `forum_id`='" . (int)$_GET['f'] . "' AND `topic_id`='" . (int)$_GET['t'] . "' ORDER BY `post_id` DESC") or errDB($link);
 	$tmp = mysql_fetch_assoc($link);
 	mysql_query("UPDATE `topics` SET
