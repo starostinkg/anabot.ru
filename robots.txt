@@ -6,4 +6,5 @@ Disallow: /gazeta/PSZh_old.php
 Disallow: /gazeta/MifyFizximii.php
 Disallow: /gazeta/ChtoEst_Real_nost_2.php
 Disallow: /gazeta/JekologovRasformirujut.php
+Disallow: /files/
 Allow: /
