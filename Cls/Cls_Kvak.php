@@ -1,7 +1,7 @@
 <?php
 
 defined ('ROOT') or exit();
-$user = 'CD20';
+//$user = 'CD20';
 class Cls_Kvak {
  public $ingroup = array(); //Массив группа => пользователи
  public $chmod = array(); //Массив группа => доступ
