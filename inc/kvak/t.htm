@@ -67,6 +67,7 @@ function kvak_t() {
               . '</div><div class="comments_kva">' . '<div class="post_top">Отправлено: ' . $post_time . '<div style="float:right">' . $delete . '</div></div><br>'
 			  . $post['post_text'] . '</div></div>';
  }
+
  if (strpbrk($f[$_GET['f']]->get_chmods(), 'w')) {
   $footer_kva .= '<div class="comment_kva_box"><div class="avatar" align="right"><div>' . $GLOBALS['user'] . '</div><div class="vgroup">' . $f[$_GET['f']]->vgroup . '</div>'
               . '</div><div class="comments_kva">' . '<div class="post_top">Ваш комментарий:</div><br>

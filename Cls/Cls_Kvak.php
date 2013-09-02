@@ -1,7 +1,7 @@
 <?php
 
 defined ('ROOT') or exit();
-//$user = 'DySprozin';
+$user = 'CD20';
 class Cls_Kvak {
  public $ingroup = array(); //Массив группа => пользователи
  public $chmod = array(); //Массив группа => доступ
@@ -66,6 +66,15 @@ class Cls_Kvak {
   $this->group2rating = $group2rating;
   $this->EN_vgroup = $vgroup;
   $this->vgroup = $rusgroup[$vgroup];
+  
+  
+  //+ наследуются младшие группы
+  foreach ($this->group2rating as $grp => $rat) {
+   if ($rat < 1) continue;
+   if ($rat > $this->group2rating[$this->EN_vgroup]) break;
+   $this->groups[] = $grp;
+  }
+  //
  }
 }
 
@@ -118,16 +127,6 @@ class Cls_Kvak_Items extends Cls_Kvak {
  
  public function kvak() {
   $this->chmods .= $this->get_chmods(); //Какие права имеет юзер на форум
-  
-  //+ права наследуются от младших групп
-  foreach ($this->group2rating as $grp => $rat) {
-   if ($rat < 1) continue;
-   if ($rat > $this->group2rating[$this->EN_vgroup]) break;
-   $this->chmods .= isset($this->chmod[$grp]) ? $this->chmod[$grp] : '';
-  }
-  $this->chmods = $this->str_unique($this->chmods);
-  //
-  
   if (!strpbrk($this->chmods, 'rED')) return '';
   if ($this->active == 'off') {
    $link = <<< LINK
