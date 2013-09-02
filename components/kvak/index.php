@@ -1,4 +1,7 @@
 <?php
+
+if ($_GET['f'] == 23 || $_GET['f'] == 11) exit();
+
 $kvak_title = 'Последние &laquo;Ква!&raquo;';
 $kvak_body = '';
 

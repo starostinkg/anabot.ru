@@ -94,7 +94,7 @@ P.S. Пожалуйста, не&nbsp;относитесь ко&nbsp;всему �
   <td class="border_left_bottom">
    &nbsp;
   </td>
-  <td class="border_right_bottom">&nbsp;
+  <td class="paper_right">&nbsp;
   </td>
  </tr>
 </table>
