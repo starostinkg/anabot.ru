@@ -40,6 +40,9 @@ include ROOT . 'inc/header_common.htm';
 <a href="http://dpva.info/" target="_blank">Справочные таблицы для инженеров</a><br>
 <a href="http://rushim.ru/books/books.htm" target="_blank" rel="nofollow">Более 1100 книг по&nbsp;химии и&nbsp;технике</a><br>
 <a href="http://window.edu.ru/library" target="_blank" rel="nofollow">Большая электронная библиотека</a><br>
+<a href="http://www.twirpx.com/" target="_blank" rel="nofollow">Более 10 000 ГБ</a> книг, учебников, методичек<br>
+<a href="http://padabum.com/" target="_blank" rel="nofollow">Скачать книги без регистрации</a><br>
+<a href="http://ihtik.lib.ru/2012.03_ihtik_chem/" target="_blank" rel="nofollow">Химия</a>, <a href="http://ihtik.lib.ru/2011.08_ihtik_nauka-tehnika/" target="_blank" rel="nofollow">Наука и техника</a> и <a href="http://ihtik.lib.ru/catalogs_ihtiklib.ru.html" target="_blank" rel="nofollow">тысячи других книг</a><br>
 </div>
 <br>
 <li>Сайты и&nbsp;статьи для биотехнологов
