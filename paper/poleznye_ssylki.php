@@ -45,6 +45,12 @@ include ROOT . 'inc/header_common.htm';
 <a href="http://ihtik.lib.ru/2012.03_ihtik_chem/" target="_blank" rel="nofollow">Химия</a>, <a href="http://ihtik.lib.ru/2011.08_ihtik_nauka-tehnika/" target="_blank" rel="nofollow">Наука и техника</a> и <a href="http://ihtik.lib.ru/catalogs_ihtiklib.ru.html" target="_blank" rel="nofollow">тысячи других книг</a><br>
 </div>
 <br>
+<li>Видео
+<div class="li">
+<a href="http://www.smartvideos.ru/" target="_blank" rel="nofollow">Smart Videos</a>&nbsp;&mdash; Умные видеоролики со всего мира<br>
+<a href="http://www.nanometer.ru/2011/09/17/obshaa_i_neorganicheskaa_himia_261874.html" rel="nofollow">Видеолекторий. Открытый видеоархив лекций по общей и неорганической химии.</a>
+</div>
+<br>
 <li>Сайты и&nbsp;статьи для биотехнологов
 <div class="li">
 <a href="http://www.biotechnolog.ru/" target="_blank" rel="nofollow">Теоретические основы биотехнологи</a>&nbsp;&mdash; электронный учебник<br>
