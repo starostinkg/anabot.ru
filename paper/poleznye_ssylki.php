@@ -25,8 +25,8 @@ include ROOT . 'inc/header_common.htm';
    <hr>
    <div class="actual_body paper_body">
 <ul>
-<li><a href="http://vlgu.info/2007/01/06/pogovorim-o-starostah/" target="_blank" rel="nofollow">&laquo;Поговорим о&nbsp;старостах&raquo;</a><br><br>
-<li>Сайты и&nbsp;статьи о&nbsp;науке и&nbsp;технике
+<li  id="#star"><a href="http://vlgu.info/2007/01/06/pogovorim-o-starostah/" target="_blank" rel="nofollow">&laquo;Поговорим о&nbsp;старостах&raquo;</a><br><br>
+<li id="#st">Сайты и&nbsp;статьи о&nbsp;науке и&nbsp;технике
 <div class="li">
 <a href="http://www.insidepro.com/kk/234/234r.shtml" target="_blank" rel="nofollow">Разоблачение 25&nbsp;кадра</a><br>
 <a href="http://alhimik.ru/" target="_blank">Алхимик</a>&nbsp;&mdash; море статей по&nbsp;химии: от&nbsp;домашнего очага до&nbsp;лабораторной топки :-)<br>
@@ -35,7 +35,7 @@ include ROOT . 'inc/header_common.htm';
 <a href="http://elementy.ru/" target="_blank" rel="nofollow">Научно-популярный проект &laquo;Элементы&raquo;</a><br>
 </div>
 <br>
-<li>Библиотеки и&nbsp;справочники
+<li id="#lib">Библиотеки и&nbsp;справочники
 <div class="li">
 <a href="http://dpva.info/" target="_blank">Справочные таблицы для инженеров</a><br>
 <a href="http://rushim.ru/books/books.htm" target="_blank" rel="nofollow">Более 1100 книг по&nbsp;химии и&nbsp;технике</a><br>
@@ -45,19 +45,19 @@ include ROOT . 'inc/header_common.htm';
 <a href="http://ihtik.lib.ru/2012.03_ihtik_chem/" target="_blank" rel="nofollow">Химия</a>, <a href="http://ihtik.lib.ru/2011.08_ihtik_nauka-tehnika/" target="_blank" rel="nofollow">Наука и техника</a> и <a href="http://ihtik.lib.ru/catalogs_ihtiklib.ru.html" target="_blank" rel="nofollow">тысячи других книг</a><br>
 </div>
 <br>
-<li>Видео
+<li id="#vid">Видео
 <div class="li">
 <a href="http://www.smartvideos.ru/" target="_blank" rel="nofollow">Smart Videos</a>&nbsp;&mdash; Умные видеоролики со всего мира<br>
-<a href="http://www.nanometer.ru/2011/09/17/obshaa_i_neorganicheskaa_himia_261874.html" rel="nofollow">Видеолекторий. Открытый видеоархив лекций по общей и неорганической химии.</a>
+<a href="http://www.nanometer.ru/2011/09/17/obshaa_i_neorganicheskaa_himia_261874.html" rel="nofollow">Открытый видеоархив лекций</a>  по общей и неорганической химии
 </div>
 <br>
-<li>Сайты и&nbsp;статьи для биотехнологов
+<li id="#bio">Сайты и&nbsp;статьи для биотехнологов
 <div class="li">
 <a href="http://www.biotechnolog.ru/" target="_blank" rel="nofollow">Теоретические основы биотехнологи</a>&nbsp;&mdash; электронный учебник<br>
 <a href="http://ionomer.ru/content/view/41/29/russian/">Как работает рН-метр</a>
 </div>
 <br>
-<li>Сайты для экологов
+<li id="#eco">Сайты для экологов
 <div class="li">
 <a href="http://www.ecology.ru" target="_blank" rel="nofollow">Группа компаний &laquo;Экология&raquo;</a><br>
 <a href="http://www.ecoindustry.ru" target="_blank" rel="nofollow">Научно-практический портал &laquo;Экология производства&raquo;</a><br>
