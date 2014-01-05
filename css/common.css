@@ -930,7 +930,12 @@ text-shadow: -10px 10px 0px #FF9933,
 }
 
 
-
+.kvak_search {
+ line-height: normal;
+ padding-left: 10px;
+ font-size: 12pt;
+ width: 95%;
+}
 
 .kvak {
  line-height: normal;
@@ -1057,6 +1062,15 @@ div.kva_pages  {
  cursor: pointer;
 }
 
+.pointer {
+ cursor: pointer;
+}
+
+.sradio {
+ cursor: pointer;
+ vertical-align:-2px;
+}
+
 .post_top {
  font-size: 9pt;
  font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -1159,4 +1173,17 @@ a.kva_pg:link, a.kva_pg:visited, a.kva_pg:active  {
 .postText {
  width: 99%;
  height: 200px;
+}
+
+.searchsubmit {
+ margin-bottom: 10px;
+ margin-top: 10px;
+}
+
+.searchtext {
+  width:450px;
+}
+
+.lsearch {
+ color: #000099;
 }

