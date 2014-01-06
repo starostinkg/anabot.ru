@@ -58,8 +58,8 @@ function kvak_s() {
      
      foreach ($light as $value) 
      $search_result .= '<div style="background:#f0f0f0;">' . 
-       '<a href="./' . $result['topic_id'] . '">' . $value . '</a>' .
-	   '<div class="foright"><span class="foall"><a href="' . $result['topic_id'] . '/all">все</a></span>&nbsp;<span class="nkva"><a href="' . $result['topic_id'] . '/kva">ква!</a></span></div></div>
+       '<a href="/kvak/' . $result['forum_id'] . '/' . $result['topic_id'] . '">' . $value . '</a>' .
+	   '<div class="foright"><span class="foall"><a href="/kvak/' . $result['forum_id'] . '/' . $result['topic_id'] . '/all">все</a></span>&nbsp;<span class="nkva"><a href="' . $result['topic_id'] . '/kva">ква!</a></span></div></div>
 	   <div style="height: 5px; background-image: url(\'/kvak/img/mtail.gif\'); background-repeat: no-repeat;"></div>
 	   <div style="font-size:10pt">' . $result['topic_last_poster'] . ' (' . $dt_last_date . ' в ' . $dt_last_time . '), <i>автор темы: </i>' . $result['topic_poster_name'] . ' (' . $dt_create_date . ' в ' . $dt_create_time . ')</div><br>';
     }
