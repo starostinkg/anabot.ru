@@ -51,6 +51,21 @@
   <div class="logo_img">
 <?php 
 
+$hkvak = '';
+$kvak_search = '';
+
+if ($meta['menu'] == '/kvak/') {
+ if (!empty($kvak_out)) $kvak_out = str_repeat('&nbsp;', mt_rand(1, 10)) . $kvak_out;
+ if (empty($_GET['search'])) $kvak_search = str_repeat('&nbsp;', mt_rand(1, 10)) . 
+                                            '<a class="menu_top" href="/kvak/search">[Искать]</a><br>';
+ else $kvak_search = str_repeat('&nbsp;', mt_rand(1, 10)) . 
+                     '<a href="#main_top" class="visited" onclick="blink(\'actual_title\')">[Искать]</a><br>';
+                     
+ $hkvak = '<div class="hkvak">
+            ' . $kvak_out . '
+            ' . $kvak_search . '
+          </div>';
+}
 if ($meta['menu'] != '/') { ?>
    <a href="/"><img class="logo_img" src="/img/logo.jpg" alt="anabot"></a>
 <?php }
@@ -61,7 +76,9 @@ else { ?>
  </div>
  <div class="head">
   <b class="head_title"><?php echo $meta['title']; ?></b> <br>
+  <?php echo $hkvak; ?>
   <div class="head_in"><?php echo $meta['head']; ?></div>
+
  </div>
  <div class="menu_top">
 <?php 

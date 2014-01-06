@@ -89,6 +89,8 @@ IMG.logo_img {
  position: relative;
 }
 
+
+
 UL {
  list-style-image:url("/img/metka.gif");
 }
@@ -155,6 +157,21 @@ LI.new {
 
 .head_in {
  padding-top: 4px;
+}
+
+.hkvak {
+ float:right;
+ right:10%;
+ position: absolute;
+ font-size:10.5pt;
+ line-height:2;
+ top: 10px;
+ width:20%;
+}
+
+A.hkvak {
+ font-size:10.5pt;
+ color:#009933;
 }
 
 .menu_top_unit {

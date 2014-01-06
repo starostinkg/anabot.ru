@@ -41,6 +41,7 @@ function window_onload() {
  h[1] = gpnrGetClass("img_small", "img");
  h[2] = gpnrGetClass("logo_img", "img");
  h[3] = gpnrGetClass("img_right_menu", "img");
+ h[4] = gpnrGetClass("kvak_logo_img", "img");
  var dot = gpnrGetClass("img_dot", "img");
  for (var i = 0; i < h.length; i++){
   for (var j = 0; j < h[i].length; j++){
@@ -66,7 +67,14 @@ function window_onload() {
   logo = logo[0];
   if (logo.scrollHeight > 149)
    logo.style.height = 150;
-  
+
+  var logo = Array();
+  logo = gpnrGetClass("kvak_logo_img", "img");
+  logo = logo[0];
+  if (logo.scrollHeight > 149)
+   logo.style.height = 150;
+
+   
   var actual_body = Array();
   actual_body = gpnrGetClass("actual_body");
   if (actual_body[0].offsetHeight < 200)

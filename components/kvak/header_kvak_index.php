@@ -2,6 +2,7 @@
 
 $kvak_str3 = '';
 $kvak_str4 = '';
+$kvak_out = '';
 
   if (empty($GLOBALS['user']) || $GLOBALS['user'] == 'Гость') {
    if (isset($error_auth)) $kvak_str3 = '<span style="color:red">Логин или пароль неверен, попробуйте еще раз:</span>';
@@ -15,7 +16,10 @@ $kvak_str4 = '';
 	  </form>
    ';
   }
-  else $kvak_str3 = '<a class="menu_top" href="/kvak/out">[Выйти]</a>';
+  else {
+   $kvak_str3 = '';
+   $kvak_out = '<a class="menu_top" href="/kvak/out">[Выйти]</a><br>';
+  }
   
   
   if (!isset($m_title)) $m_title = $kvak_title;
@@ -26,7 +30,7 @@ $kvak_str4 = '';
   $meta['css'] = '/css/common.css';
   $meta['head'] = 'Здравствуйте, <b>' . $f[11]->user . '</b>!<br>
     Добро пожаловать в наше болото.  &nbsp;<br>
-    ' . $kvak_str3 . '<br>
+    ' . $kvak_str3 . '&nbsp;<br>
     ' . $kvak_str4 . '&nbsp;
   ';
   $meta['menu'] = '/kvak/';
