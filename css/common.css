@@ -990,6 +990,15 @@ line-height: 0px;
  height: 40px;
 }
 
+.kvak_grad_link  {
+ height: 40px;
+ text-decoration: none;
+ display: block;
+}
+
+./*kva_pages a:link, .kva_pages  a:visited, .kva_pages  a:active*/
+
+
 .png24 {
  behavior: url("/css/pngbehavior.htc");
 }
