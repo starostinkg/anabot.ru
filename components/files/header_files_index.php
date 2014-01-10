@@ -4,10 +4,20 @@
                          ' облегчат вашу студенческую жизнь :-) читерство, короче :-)';
   $meta['keywords'] = 'Файлы РХТУ, файловый архив, читерство в универе, все для студента';
   $meta['css'] = '/css/common.css';
-  $meta['head'] = 'А тут можно сказать, святая святых сайта ;-)<br>
-   На этой странице вы найдете файловые новинки. <br>
-  Мало этого? Тогда приглашаем посетить<br>
-  <a href="http://files.anabot.ru/">большой файловый архив РХТУ</a> (>20 Гб).
+  $meta['head'] = '
+  Большой файловый архив (>20 Гб) &mdash; <a href="http://files.anabot.ru/">можно скачать там</a> <br>
+  А тут файловые новинки. Внесите и вы свой вклад:<br>
+  <div style="margin-top:5px;">
+ <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="350" height="60">
+<param name="movie" value="http://static343.depositfiles.com/flash/DepositUploader_350x60.swf?ref=anabotru&member_passkey=1fvrw5ow4y73al8x&interfaceId=3&lang=RU&lang_xml=http%3A%2F%2Fstatic343.depositfiles.com%2Fflash%2FDepositUploader.xml"></param>
+<param name="menu" value="false"></param>
+<param name="scale" value="noScale"></param>
+<param name="allowFullScreen" value="true"></param>
+<param name="allowscriptaccess" value="always"></param>
+<param name="wmode" value="transparent"></param>
+<embed src="http://static343.depositfiles.com/flash/DepositUploader_350x60.swf?ref=anabotru&member_passkey=1fvrw5ow4y73al8x&interfaceId=3&lang=RU&lang_xml=http%3A%2F%2Fstatic343.depositfiles.com%2Fflash%2FDepositUploader.xml" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" menu="false" scale="noScale" wmode="transparent" width="350" height="60"></embed>
+</object>
+</div>
 ';
   $meta['menu'] = '/files/';
   
