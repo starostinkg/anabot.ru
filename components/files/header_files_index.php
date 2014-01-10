@@ -5,7 +5,7 @@
   $meta['keywords'] = 'Файлы РХТУ, файловый архив, читерство в универе, все для студента';
   $meta['css'] = '/css/common.css';
   $meta['head'] = '
-  Большой файловый архив (>20 Гб) &mdash; <a href="http://files.anabot.ru/">можно скачать там</a> <br>
+  Большой файловый архив (>20 Гб) <a href="http://files.anabot.ru/">можно скачать там.</a> <br>
   А тут файловые новинки. Внесите и вы свой вклад:<br>
   <div style="margin-top:5px;">
  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="350" height="60">
