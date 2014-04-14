@@ -32,12 +32,12 @@ include ROOT . 'inc/header_common.htm';
    </div>
   </td>
   <td class="border_right">
-  <img src="/img/positive.gif" alt="Позитивые новости" class="img_right_menu">
+  <!--img src="/img/positive.gif" alt="Позитивые новости" class="img_right_menu">
   <div class="border_right_menu" style="padding-top: 0px;">
    <a class="border_right_link" href="#/news/"  style="color: gray;" onclick="alert('В разработке, скоро появится ;)');">Новости мира<br>
    от  01.09.2012</a>
   </div>
-  <br class="break">
+  <br class="break"-->
   <img src="/img/vk.gif" alt="Анабот Вконтакте" class="img_right_menu">
   <div class="border_right_menu">
    <a class="border_right_link" href="http://vkontakte.ru/club758006">Мы Вконтакте</a>

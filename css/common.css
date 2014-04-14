@@ -24,7 +24,8 @@ DIV.menu_top {
  text-align:center;
  float:left;
  font-size:11pt;
- width:100%;
+ left:5%;
+ width:90%;
 }
 
 
@@ -176,7 +177,7 @@ A.hkvak {
 
 .menu_top_unit {
  float:left;
- width:16%;
+ width:20%;
  text-align: center;
  /* width:12.5%; */
  /* десятые доли в опере не поддеживаются!!!*/
