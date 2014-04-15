@@ -38,6 +38,11 @@ include ROOT . 'inc/header_common.htm';
    от  01.09.2012</a>
   </div>
   <br class="break"-->
+  <img src="/img/dz.gif" alt="Бесплатные научные статьи" class="img_right_menu">
+  <div class="border_right_menu">
+   <a class="border_right_link" href="http://www.jxplore.com/resources">Скачать научные статьи</a>
+  </div>
+  <br class="break">
   <img src="/img/vk.gif" alt="Анабот Вконтакте" class="img_right_menu">
   <div class="border_right_menu">
    <a class="border_right_link" href="http://vkontakte.ru/club758006">Мы Вконтакте</a>
