@@ -137,7 +137,7 @@ $main_css = "border";
    
  }
  elseif (!empty($_GET['f']) && !empty($_GET['t'])) {
-  if (!strpbrk($f[$_GET['f']]->get_chmods(), 'rED')) {
+  if (!strpbrk($f[$_GET['f']]->get_chmods(), 'rED')) { //Человек должен иметь право на чтение (r), либо быть модером
    $kvak_title = '<span style="color:red">Такого квака не найдено :-(</span>';
    $kvak_body = join(file(ROOT . 'inc/kvak/index.htm'));
   }
@@ -167,6 +167,7 @@ $main_css = "border";
 	Header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit();
    }
+   
    //Удаление поста
    if (!empty($_GET['delpost']) && strpbrk($f[$_GET['f']]->get_chmods(), 'D')) {
    	$link = mysql_query ("SELECT * FROM `posts` WHERE `forum_id`='" . (int)$_GET['f'] . "' AND `topic_id`='" . (int)$_GET['t'] . "' ORDER BY `post_id` DESC") or errDB($link);
@@ -191,6 +192,13 @@ $main_css = "border";
     exit();
 		
    }
+   
+   //Редактирование поста
+   /*
+   if (!empty($_GET['editpost']) && strpbrk($f[$_GET['f']]->get_chmods(), 'E')) {
+    $link = mysql_query ("UPDATE `posts` SET `post_text`='??????' WHERE `post_id`='" . (int)$_GET['editpost'] . "';") or errDB($link);
+    
+   }*/
    $page = empty($_GET['page']) ? 1 : $_GET['page'];
    if (!empty($_GET['oldpage'])) $page = $_GET['oldpage'] + 1;
    
