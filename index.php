@@ -38,6 +38,12 @@ include ROOT . 'inc/header_common.htm';
    от  01.09.2012</a>
   </div>
   <br class="break"-->
+
+  <img src="/img/vk.gif" alt="Анабот Вконтакте" class="img_right_menu">
+  <div class="border_right_menu">
+   <a class="border_right_link" href="http://vkontakte.ru/club758006">Мы Вконтакте</a>
+  </div>
+  <br class="break">
   <img src="/img/sci-hub.gif" alt="Бесплатные научные статьи" class="img_right_menu">
   <div class="border_right_menu" style="padding-top: 0px;">
    <a target="_blank" class="border_right_link" href="http://www.sci-hub.org/">Sci-Hub: сервис доступа<br> к научной литературе</a>
@@ -45,17 +51,12 @@ include ROOT . 'inc/header_common.htm';
   <br class="break">
   <img src="/img/libgen.gif" alt="Бесплатные научные статьи" class="img_right_menu">
   <div class="border_right_menu" style="padding-top: 0px;">
-   <a target="_blank" class="border_right_link" href="http://libgen.org/">Архив научных статей<br> (поиск и скачивание)</a>
+   <a target="_blank" class="border_right_link" href="http://libgen.org/">Поиск и скачивание научных статей и книг</a>
   </div>
   <br class="break">  
   <img src="/img/dz.gif" alt="Бесплатные научные статьи" class="img_right_menu">
   <div class="border_right_menu" style="padding-top: 0px;">
    <a target="_blank" class="border_right_link" href="http://www.jxplore.com/resources">Бесплатно скачать научные статьи</a>
-  </div>
-  <br class="break">
-  <img src="/img/vk.gif" alt="Анабот Вконтакте" class="img_right_menu">
-  <div class="border_right_menu">
-   <a class="border_right_link" href="http://vkontakte.ru/club758006">Анабот Вконтакте</a>
   </div>
   <br class="break">
   <img src="/img/market.gif" alt="Жми скорей!" class="img_right_menu">
