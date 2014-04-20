@@ -66,7 +66,7 @@ function kvak_t() {
   $kva_user = new Cls_Kvak($post['poster_name']);
   
   if (strpbrk($f[$_GET['f']]->get_chmods(), 'D')) $delete= ' <a href="./del-' . $post['post_id'] . '">Удалить</a> ';
-  if (strpbrk($f[$_GET['f']]->get_chmods(), 'E')) $edit = ' <a href="./edit-' . $post['post_id'] . '">Редактировать</a> ';;
+  ///////if (strpbrk($f[$_GET['f']]->get_chmods(), 'E')) $edit = ' <a href="./edit-' . $post['post_id'] . '">Редактировать</a> ';;
   $footer_kva .= '<div class="comment_kva_box"><div class="avatar" align="right"><div>' . $post['poster_name'] . '</div><div class="vgroup">' . $kva_user->vgroup . '</div>'
               . '</div><div class="comments_kva">' . '<div class="post_top">Отправлено: ' . $post_time . '<div style="float:right">' . $delete . '</div></div><br>'
 			  . $post['post_text'] . '</div></div>';
