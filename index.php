@@ -49,6 +49,11 @@ include ROOT . 'inc/header_common.htm';
    <a target="_blank" class="border_right_link" href="http://www.sci-hub.org/">Sci-Hub: сервис доступа<br> к научной литературе</a>
   </div>
   <br class="break">
+  <img src="/img/studfiles.png" alt="Файловый архив РХТУ" class="img_right_menu">
+  <div class="border_right_menu" style="padding-top: 0px;">
+   <a class="border_right_link" href="http://www.studfiles.ru/rhtu/">Большой архив файлов<br> (РХТУ и не только)</a>
+  </div>
+  <br class="break">
   <img src="/img/libgen.gif" alt="Бесплатные научные статьи" class="img_right_menu">
   <div class="border_right_menu" style="padding-top: 0px;">
    <a target="_blank" class="border_right_link" href="http://libgen.org/scimag/index.php">Поиск и скачивание научных статей и книг</a>
