@@ -58,6 +58,11 @@ include ROOT . 'inc/header_common.htm';
   <li><a href="/paper/2/2">Заправка струйного принтера на&nbsp;коленке</a>
  </ul>
 <br>
+<li class="comp">Научные статьи
+ <ul>
+  <li><a href="/paper/Microwave%20regenaration.pdf">Семенищева Е. Л., Старостин К. Г., Клушин В. Н. &laquo;Регенерация гранулированного активного угля, насыщенного парами бутанола, микроволновым излучением&raquo;</a>
+ </ul>
+<br>
 <li class="serios">Не в шутку, не всерьез
  <ul>
   <li><a href="/paper/3/136">ЖПНР</a>
