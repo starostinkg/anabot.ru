@@ -117,6 +117,7 @@ UL {
 
 LI.new {
  list-style-image:url("/img/new.gif");
+ margin-top:10px;
 }
 
 
@@ -1174,6 +1175,7 @@ a.kva_pg:link, a.kva_pg:visited, a.kva_pg:active  {
 
 .auth_form {
  margin: 0px;
+ margin-top:5px;
  padding: 0px;
 }
 
