@@ -9,8 +9,7 @@ include ROOT . 'inc/header_common.htm';
 ?>
 
 <script type="text/javascript" src="/js/kvak.js"></script>
-
-<br class="break0">
+<br class="break">
 <div class="kvak_head" <?php echo empty($align_topic) ? '' : $align_topic; ?>><?php echo empty($forum_top) ? '' : $forum_top; echo empty($kvak_pages) ? '&nbsp;' : $kvak_pages; ?></div>
 <!--Список КВА -->
 
