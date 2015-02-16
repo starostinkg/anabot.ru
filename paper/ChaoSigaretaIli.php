@@ -106,8 +106,7 @@ Cui bono? Cui prodest?
 <div class="img_center">
 <img alt="" src="/paper/img/Chao.jpg">
 </div>   </div>
-  <!-- comment form -->
-  <?php include ROOT . 'inc/paper/comment.htm'; ?>
+
   <script type="text/javascript" src="/js/paper.js"></script>
   </td>
   <td class="paper_right">

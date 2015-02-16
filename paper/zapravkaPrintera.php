@@ -159,8 +159,7 @@ include ROOT . 'inc/header_common.htm';
 <li> <a target="_blank" rel="nofollow" href="http://www.wasp.kz/articles.php?article_id=131">Любопытная статейка о&nbsp;реанимации картриджа</a> с&nbsp;его вскрытием.
 </ul>
    </div>
-  <!-- comment form -->
-  <?php include ROOT . 'inc/paper/comment.htm'; ?>
+
   <script type="text/javascript" src="/js/paper.js"></script>
   </td>
   <td class="paper_right">

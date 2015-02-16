@@ -159,3 +159,9 @@ function blink(id) {
 }
 
 
+
+window.onload = function() {
+
+ if (document.getElementById('paper_comment')) document.getElementById('paper_comment').style.display='none';
+
+}

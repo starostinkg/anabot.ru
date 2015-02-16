@@ -25,8 +25,7 @@ include ROOT . 'inc/header_common.htm';
    <div class="actual_body paper_body">
 Текст статьи 
    </div>
-  <!-- comment form -->
-  <?php include ROOT . 'inc/paper/comment.htm'; ?>
+
   <script type="text/javascript" src="/js/paper.js"></script>
   </td>
   <td class="paper_right">

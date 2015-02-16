@@ -47,8 +47,7 @@ include ROOT . 'inc/header_common.htm';
     <i>2010 год</i>
 
    </div>
-  <!-- comment form -->
-  <?php include ROOT . 'inc/paper/comment.htm'; ?>
+
   <script type="text/javascript" src="/js/paper.js"></script>
   </td>
   <td class="paper_right">

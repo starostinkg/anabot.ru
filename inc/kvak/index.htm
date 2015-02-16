@@ -18,7 +18,7 @@ function kvak_index() {
   if (mb_strlen(trim(strip_tags($post['post_text']), "\x00..\x1F"), "utf-8") < $GLOBALS['maxlen_main_posts'] ||
      !strpbrk($f[$idf]->get_chmods(), 'rED') ||
 	 $f[$idf]->title == '' ||
-	 in_array($idt, $idts)) continue; //Чтобы темы не повторялись
+	 in_array($idt.'', $idts)) continue; //Чтобы темы не повторялись
   $idts[] = $idt;
   $posts[] = $post['post_text'];
   $topics[] = $topic['topic_title'];

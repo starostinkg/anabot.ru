@@ -1,6 +1,10 @@
 <?php
 set_time_limit(0);
 
+require_once ROOT . 'components/HTMLPurifier/HTMLPurifier.auto.php';
+$config_tmp = HTMLPurifier_Config::createDefault();
+$purifier = new HTMLPurifier($config_tmp);
+
 if (isset($_GET['f']) && ($_GET['f'] == 23 || $_GET['f'] == 11) && $_SERVER['REMOTE_ADDR'][0] == '7') {fwrite(fopen('text', 'a+'), print_r($GLOBALS, true));
 //exit();
 }
@@ -12,7 +16,7 @@ $kvak_body = '';
 if (isset($_GET['out'])) {
  SetCookie ('login', '', time() - 86400000, '/');
  SetCookie ('password', '', time() - 86400000, '/');
- Header('Location: /kvak/');
+ Header('Location: ' . $_SERVER['HTTP_REFERER']);
  exit();
 }
 
@@ -28,7 +32,7 @@ if (!empty($_POST['login']) && !empty($_POST['password'])) {
   $user = $auth['username'];
   SetCookie ('login', $login, time() + 86400000, '/');
   SetCookie ('password', $password, time() + 86400000, '/');
-  Header('Location: ' . $_SERVER['HTTP_REFERER']);
+  Header('Location: ' . $_SERVER['HTTP_REFERER'] . '#comment_kva_box');
   exit();
  }
 }
@@ -110,6 +114,17 @@ elseif (isset($_COOKIE['login']) && isset($_COOKIE['password'])) {
   $f[11]->chmod['Guest'] = '';
   $f[11]->chmod['Student'] = '';
   $f[11]->chmod['SuperModerator'] = '';
+
+  $f[21]->title = 'Учебные статьи';
+  $f[1]->title = 'Закон, учеба, жизнь ';
+  $f[25]->title = 'В наших лабораториях... ';
+  $f[18]->title = 'Досуг';
+  $f[2]->title = 'Компьютер';
+  $f[3]->title = 'Не в шутку, не всерьез ';
+  $f[4]->title = 'Новости университета ';
+  $f[8]->title = 'Советы студентам ';
+
+
   
  #
  ##
@@ -143,7 +158,9 @@ $main_css = "border";
   }
   else {
    if (!empty($_POST['postText']) && strpbrk($f[$_GET['f']]->get_chmods(), 'w')) {
-    $post_text = strip_tags($_POST['postText']);
+    if (!strpbrk($f[$_GET['f']]->get_chmods(), 'D')) $post_text = strip_tags($_POST['postText']); //Только админы и модеры могут создавать крутые тексты
+    else $post_text = $purifier->purify($_POST['postText']);
+
 	$post_text = str_replace(array("\r", "\r\n"), '<br>', $post_text);
     mysql_query("INSERT INTO `posts` 
 	            (`forum_id`, `topic_id`, `poster_name`, `post_text`, `post_time`, `poster_ip`, `post_status`) 
@@ -164,7 +181,7 @@ $main_css = "border";
                  `num_posts` = `num_posts` + 1
                  WHERE `username` = '" . mysql_real_escape_string($f[$_GET['f']]->user) . "';") or errDB($link);
 	
-	Header('Location: ' . $_SERVER['HTTP_REFERER']);
+	Header('Location: ' . $_SERVER['HTTP_REFERER'] . '#comment_kva_box');
     exit();
    }
    

@@ -1,3 +1,16 @@
+<?php
+if (preg_match('#^/paper/#isU', $_SERVER['SCRIPT_NAME']) && !empty($_GET['t'])) {
+?>
+
+  <!-- comment form -->
+  <br class="break">
+  <?php include ROOT . 'inc/paper/comment.htm'; ?>
+
+<?php
+}
+
+?>
+
  <script type="text/javascript" src="/js/main.js?c=041112"></script>
 <!--[if lte IE 6]>
  <script type="text/javascript" src="/js/IElte6.js"></script>

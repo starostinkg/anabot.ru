@@ -53,8 +53,7 @@ include ROOT . 'inc/header_common.htm';
     &copy;&nbsp;Astra<br>
     <i>2009 г.</i>
    </div>
-  <!-- comment form -->
-  <?php include ROOT . 'inc/paper/comment.htm'; ?>
+
   <script type="text/javascript" src="/js/paper.js"></script>
   </td>
   <td class="paper_right">
