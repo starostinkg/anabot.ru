@@ -1,19 +1,19 @@
 <?php
 
-$link = join(file("https://api.vk.com/method/wall.get?domain=anabotnews&count=10&filter=owner"));
+//$link = join(file("https://api.vk.com/method/wall.get?domain=anabotnews&count=10&filter=owner"));
 
-$link = str_replace('😎', '8-)', $link);
+//$link = str_replace('рџЋ', '8-)', $link);
 
-$link = json_decode($link);
+//$link = json_decode($link);
 
-$Data = '';
+if (!preg_match('#^/paper/#isU', $_SERVER['SCRIPT_NAME'])) $Data = eval(join(file(ROOT . 'inc/index.htm')));
 
-if ((count($link->response) < 2)) $Data = 'А новостей пока нет...';
-else {
- for ($i = 1; $i < (count($link->response)); $i++) {
-  $Data .= '<li class="new">' . $link->response[$i]->text;
- }
-}
+///////////////if ((count($link->response) < 2)) $Data = 'Рђ РЅРѕРІРѕСЃС‚РµР№ РїРѕРєР° РЅРµС‚...';
+///////////////else {
+/////////////// for ($i = 1; $i < (count($link->response)); $i++) {
+///////////////  $Data .= '<li class="new">' . $link->response[$i]->text;
+/////////////// }
+///////////////}
 
 /*
  if($link = mysql_query ("SELECT * from posts WHERE topic_id = " . (int)$GLOBALS['new_topic_id'] . " ORDER BY post_id DESC LIMIT 1")) {

@@ -1,6 +1,9 @@
 ?>
 
 <?php
+
+//topic_status = 2 - удаленная тема
+
 function kvak_f() {
  $topics = array();
  $stopics = array();
@@ -10,15 +13,15 @@ function kvak_f() {
  
  //Проверяем, есть ли липкие темы
  $sticks = 0;
- $link = mysql_query("SELECT * FROM `topics` WHERE `sticky`='1' AND `forum_id`='" . (int)$_GET['f'] . "' ORDER BY `topic_last_post_time` DESC") or errDB($link);
+ $link = mysql_query("SELECT * FROM `topics` WHERE `sticky`='1' AND `topic_status`!='2' AND `forum_id`='" . (int)$_GET['f'] . "' ORDER BY `topic_last_post_time` DESC") or errDB($link);
  while($topic = mysql_fetch_assoc($link)) {
   $stopics[] = $topic;
   $sticks++;
  }
  
  $lstart = ($page - 1) * ($p_f - $sticks);
- if ($page == 1) $link = mysql_query("SELECT * FROM `topics` WHERE `sticky`='0' AND `forum_id`='" . (int)$_GET['f'] . "' ORDER BY `topic_last_post_time` DESC LIMIT $lstart," . ($p_f - $sticks)) or errDB($link);
- else $link = mysql_query("SELECT * FROM `topics` WHERE `sticky`='0' AND `forum_id`='" . (int)$_GET['f'] . "' ORDER BY `topic_last_post_time` DESC LIMIT $lstart,$p_f");
+ if ($page == 1) $link = mysql_query("SELECT * FROM `topics` WHERE `sticky`='0' AND `topic_status`!='2' AND `forum_id`='" . (int)$_GET['f'] . "' ORDER BY `topic_last_post_time` DESC LIMIT $lstart," . ($p_f - $sticks)) or errDB($link);
+ else $link = mysql_query("SELECT * FROM `topics` WHERE `sticky`='0' AND `topic_status`!='2' AND `forum_id`='" . (int)$_GET['f'] . "' ORDER BY `topic_last_post_time` DESC LIMIT $lstart,$p_f");
  while($topic = mysql_fetch_assoc($link)) {
   $topics[] = $topic;
  }

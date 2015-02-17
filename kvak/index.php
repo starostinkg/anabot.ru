@@ -45,6 +45,7 @@ include ROOT . 'inc/header_common.htm';
   echo $f[12]->kvak();
   echo $f[23]->kvak();
   echo $f[11]->kvak();
+  echo $f[30]->kvak();
  }
 ?>
 

@@ -124,6 +124,12 @@ elseif (isset($_COOKIE['login']) && isset($_COOKIE['password'])) {
   $f[4]->title = 'Новости университета ';
   $f[8]->title = 'Советы студентам ';
 
+  $f[30]->title = 'Блог';
+  $f[30]->img_src = '/kvak/img/blog.gif';
+  $f[30]->img_alt = '[B]';
+  $f[30]->chmod['Guest'] = 'r';
+  $f[30]->chmod['Student'] = 'rw';
+  $f[30]->chmod['SuperModerator'] = 'ED';
 
   
  #
@@ -139,6 +145,44 @@ $main_css = "border";
   if (empty($f[$_GET['f']]->title) || !strpbrk($f[$_GET['f']]->get_chmods(), 'rED')) {
    $kvak_title = '<span style="color:red">Такого квака не найдено :-(</span>';
    $kvak_body = join(file(ROOT . 'inc/kvak/index.htm'));
+  }
+  //Пока создают темы только модеры/админы
+  elseif (!empty($_POST['postText']) && strpbrk($f[$_GET['f']]->get_chmods(), 'D') && !empty($_POST['TitleTheme'])) {
+   
+   $theme_title=strip_tags($_POST['TitleTheme']);
+   
+   if (!strpbrk($f[$_GET['f']]->get_chmods(), 'D')) $post_text = strip_tags($_POST['postText']); //Только админы и модеры могут создавать крутые тексты
+   else $post_text = $purifier->purify($_POST['postText']);
+   
+   $post_text = str_replace(array("\r", "\r\n"), '<br>', $post_text);
+   mysql_query("INSERT INTO `topics`
+               (`topic_title`, `topic_poster_name`, `topic_time`, `topic_views`, `forum_id`, `topic_status`, `topic_last_post_id`, `posts_count`, `sticky`, `topic_last_post_time`, `topic_last_poster`)
+               VALUES ('$theme_title', '" . mysql_real_escape_string($f[$_GET['f']]->user) . "', now(), '', " . (int)$_GET['f'] . ", '', '1', '', '0', now(), '" . mysql_real_escape_string($f[$_GET['f']]->user) . "');") or errDB($link);
+   $link = mysql_query ("SELECT * FROM `topics` ORDER BY `topic_id` DESC") or errDB($link);
+   $tmp = mysql_fetch_assoc($link);
+   $tmp_topic = (int)$tmp['topic_id'];
+
+   mysql_query("INSERT INTO `posts` 
+               (`forum_id`, `topic_id`, `poster_name`, `post_text`, `post_time`, `poster_ip`, `post_status`) 
+                VALUES ('" . (int)$_GET['f'] . "', '" . (int)$tmp_topic . "', '" . mysql_real_escape_string($f[$_GET['f']]->user) . "', '" . mysql_real_escape_string($post_text) . "', now(), '" . $GLOBALS['ip'] . "' , '0');") or errDB($link);
+   $link = mysql_query ("SELECT * FROM `posts` WHERE `forum_id`='" . (int)$_GET['f'] . "' AND `topic_id`='" . (int)tmp_topic . "' ORDER BY `post_id` DESC") or errDB($link);
+   $tmp = mysql_fetch_assoc($link);
+   mysql_query("UPDATE `forums` SET
+                `posts_count` = `posts_count` + 1
+                WHERE `forum_id` = '" . (int)$_GET['f'] . "';") or errDB($link);
+                
+   mysql_query("UPDATE `forums` SET
+                `topics_count` = `topics_count` + 1
+                WHERE `forum_id` = '" . (int)$_GET['f'] . "';") or errDB($link);
+                
+   mysql_query("UPDATE `users` SET
+                `num_posts` = `num_posts` + 1
+                WHERE `username` = '" . mysql_real_escape_string($f[$_GET['f']]->user) . "';") or errDB($link);
+   
+   
+   
+   Header('Location: ' . $_SERVER['HTTP_REFERER']);
+   exit();
   }
   else {
    $page = empty($_GET['page']) ? 1 : $_GET['page'];
@@ -157,7 +201,7 @@ $main_css = "border";
    $kvak_body = join(file(ROOT . 'inc/kvak/index.htm'));
   }
   else {
-   if (!empty($_POST['postText']) && strpbrk($f[$_GET['f']]->get_chmods(), 'w')) {
+   if (!empty($_POST['postText']) && strpbrk($f[$_GET['f']]->get_chmods(), 'w') && empty($_POST['CreateTheme'])) {
     if (!strpbrk($f[$_GET['f']]->get_chmods(), 'D')) $post_text = strip_tags($_POST['postText']); //Только админы и модеры могут создавать крутые тексты
     else $post_text = $purifier->purify($_POST['postText']);
 
@@ -184,6 +228,7 @@ $main_css = "border";
 	Header('Location: ' . $_SERVER['HTTP_REFERER'] . '#comment_kva_box');
     exit();
    }
+
    
    //Удаление поста
    if (!empty($_GET['delpost']) && strpbrk($f[$_GET['f']]->get_chmods(), 'D')) {
