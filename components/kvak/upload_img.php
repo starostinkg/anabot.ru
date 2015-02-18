@@ -26,14 +26,15 @@ define ('ROOT', $_SERVER['DOCUMENT_ROOT'] . '/');
 
 $target_dir = ROOT . "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$target_file2 = $target_dir .date("U") . '_' . translit(basename($_FILES["fileToUpload"]["name"]));
+$target_file2 = $target_dir . date("U") . '_' . translit(basename($_FILES["fileToUpload"]["name"]));
+$target_file3 = date("U") . '_' . translit(basename($_FILES["fileToUpload"]["name"]));
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
+        //echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
         echo "File is not an image.";
@@ -63,7 +64,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file2)) {
-        echo "The file <a href='". "http://anabot.ru/uploads/". date("U") . '_' . translit(basename($_FILES["fileToUpload"]["name"])) . "'>http://anabot.ru/uploads/". date("U") . '_' . translit(basename($_FILES["fileToUpload"]["name"])) . "</a> has been uploaded.";
+        Header("Location: /upload.php?url=http://anabot.ru/uploads/". $target_file3);
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
