@@ -13,16 +13,16 @@ include ROOT . 'inc/header_common.htm';
 <table class="table_actual">
  <tr>
   <td class="border_left_top">
-   <div class="actual_title">
+   <!--div class="actual_title">
     Актуально
-   </div>
+   </div-->
   </td>
   <td class="border_right_top">&nbsp;
   </td>
  </tr>
  <tr>
   <td class="border_left">
-   <hr>
+   <!--hr-->
 <!--Список новостей ("актуально!")-->
 <?php include ROOT . 'components/main/actual.php'; ?>
    <div class="actual_body">
