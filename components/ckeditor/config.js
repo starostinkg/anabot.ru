@@ -33,5 +33,5 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removeDialogTabs = '';
     config.removePlugins = '';
     config.extraPlugins = 'format,image,justify,sourcedialog,colorbutton';
-    
+    config.disableNativeSpellChecker = false;
 };
