@@ -32,6 +32,6 @@ CKEDITOR.editorConfig = function( config ) {
 	// Dialog windows are also simplified.
 	config.removeDialogTabs = '';
     config.removePlugins = '';
-    config.extraPlugins = 'format,image,justify,sourcedialog,colorbutton';
+    config.extraPlugins = 'format,image,justify,sourcedialog,colorbutton,preview';
     config.disableNativeSpellChecker = false;
 };
