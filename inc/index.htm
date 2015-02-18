@@ -35,7 +35,7 @@ function kvak_index() {
  $Tidy_config = array('clean' => true, 'show-body-only' => true); 
  foreach($posts as $id => $post) {
   //$post = strip_tags($post, "<br><div><font><span><b><i><s><a><strong><h1><img>");
-  $post = cutString($post, 2000, $idts[$id]);
+  $post = cutString($post, 2500, $idts[$id]);
   $Tidy->parseString($post, $Tidy_config, 'utf8');
   $post = $Tidy;
   echo '<table class="kvak_t">
