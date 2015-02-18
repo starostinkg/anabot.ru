@@ -157,7 +157,7 @@ $main_css = "border";
    $post_text = str_replace(array("\r", "\r\n"), '<br>', $post_text);
    mysql_query("INSERT INTO `topics`
                (`topic_title`, `topic_poster_name`, `topic_time`, `topic_views`, `forum_id`, `topic_status`, `topic_last_post_id`, `posts_count`, `sticky`, `topic_last_post_time`, `topic_last_poster`)
-               VALUES ('$theme_title', '" . mysql_real_escape_string($f[$_GET['f']]->user) . "', now(), '', " . (int)$_GET['f'] . ", '', '1', '', '0', now(), '" . mysql_real_escape_string($f[$_GET['f']]->user) . "');") or errDB($link);
+               VALUES ('$theme_title', '" . mysql_real_escape_string($f[$_GET['f']]->user) . "', now(), '0', " . (int)$_GET['f'] . ", '', '1', '', '0', now(), '" . mysql_real_escape_string($f[$_GET['f']]->user) . "');") or errDB($link);
    $link = mysql_query ("SELECT * FROM `topics` ORDER BY `topic_id` DESC") or errDB($link);
    $tmp = mysql_fetch_assoc($link);
    $tmp_topic = (int)$tmp['topic_id'];
