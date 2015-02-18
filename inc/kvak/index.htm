@@ -4,7 +4,7 @@
 <?php
 
 function kvak_index() {
- $link = mysql_query("SELECT * FROM `posts` WHERE `post_status`!='3' AND `topic_id`!='30' ORDER BY `post_time` DESC") or errDB($link);
+ $link = mysql_query("SELECT * FROM `posts` WHERE `post_status`!='3' AND `forum_id`!='30' ORDER BY `post_time` DESC") or errDB($link);
  $ch = 0;
  $posts = array();
  $idts = array();
