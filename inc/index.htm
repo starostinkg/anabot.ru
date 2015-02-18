@@ -11,7 +11,7 @@ function cutString($string, $maxlen,$id) {
     $cutStr = mb_substr($string, 0, $len);
     return (mb_strlen($string) > $maxlen)
         ? '' . $cutStr . '... <div align="right">  <a href="/kvak/30/' . $id . '/last">Читать далее</a></div>'
-        : '' . $cutStr . ' <div align="right">  <a href="/kvak/30/' . $id . '/last">Читать далее</a></div> '
+        : '' . $cutStr . ' <div align="right">  <a href="/kvak/30/' . $id . '/last">Читать/писать комменты</a></div> '
     ;
 }
 

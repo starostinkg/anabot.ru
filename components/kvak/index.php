@@ -127,7 +127,7 @@ elseif (isset($_COOKIE['login']) && isset($_COOKIE['password'])) {
   $f[30]->title = 'Блог';
   $f[30]->img_src = '/kvak/img/blog.gif';
   $f[30]->img_alt = '[B]';
-  $f[30]->chmod['Guest'] = 'r';
+  $f[30]->chmod['Guest'] = 'rw';
   $f[30]->chmod['Student'] = 'rw';
   $f[30]->chmod['SuperModerator'] = 'ED';
 
