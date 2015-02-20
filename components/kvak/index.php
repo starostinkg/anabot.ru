@@ -255,6 +255,11 @@ $main_css = "border";
 		
    }
    
+   if (!empty($_GET['deltop']) && strpbrk($f[$_GET['f']]->get_chmods(), 'D')) {
+    $link = mysql_query("UPDATE `topics` SET `topic_status` = '2' WHERE `topic_id` = '".$_GET['deltop']."';") or errDB($link);
+    Header('Location: /kvak/'.$_GET['f'].'/');
+   }
+   
    //Редактирование поста
    /*
    if (!empty($_GET['editpost']) && strpbrk($f[$_GET['f']]->get_chmods(), 'E')) {

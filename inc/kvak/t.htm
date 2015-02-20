@@ -4,6 +4,7 @@
 
 function kvak_t() {
  $delete = ''; //удалить пост
+ $delete_topic = ''; //Удалить тему
  $edit = ''; //редактировать пост
  
  $t = $_GET['t'];
@@ -39,7 +40,10 @@ function kvak_t() {
  $post_status = $post1['post_status'];
  if (empty($post_status)) $post_status = 1;
  
- echo '<div align="center">' . $title . '</div><hr style="margin-top:8px;">';
+ if (strpbrk($f[$_GET['f']]->get_chmods(), 'D')) $delete_topic= ' <div style="float:right"><a href="./deltop-' . $post1['topic_id'] . '">Удалить</a> </div><br>';
+ 
+ echo $delete_topic;
+ if ($_GET['f'] != 30) echo '<div align="center">' . $title . '</div><hr style="margin-top:8px;">';
  
  echo '<div id="first_fade" onclick="open_post();"><span>Раскрыть первое сообщение</span></div>';
  
