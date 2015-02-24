@@ -33,7 +33,7 @@ include ROOT . 'inc/header_common.htm';
 <p>
 Позволим себе привести здесь полный текст легенды об&nbsp;Останкине в&nbsp;том виде, в&nbsp;котором она дошла до&nbsp;наших дней. 
 </p>
-<div class="quote">
+<div class="quote">&nbsp;
 &nbsp;
 </div>
 <div class="quoting">

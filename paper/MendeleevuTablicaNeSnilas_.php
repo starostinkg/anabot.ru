@@ -39,7 +39,7 @@ include ROOT . 'inc/header_common.htm';
 <p>
 Менделеев, конечно, гений&nbsp;&mdash; никто не&nbsp;спорит, но... Вам не&nbsp;видится в&nbsp;этом объяснении некоторой издевки над слушателями? Смеси раздражения и&nbsp;горестной усмешки? Что именно снилось химику и&nbsp;когда&nbsp;&mdash; об&nbsp;этом никто не&nbsp;знает, однако достоверно известно, что...
 </p>
-<div class="quote">
+<div class="quote">&nbsp;
 
 </div>
 <div class="quoting">

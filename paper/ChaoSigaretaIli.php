@@ -78,7 +78,7 @@ Cui bono? Cui prodest?
 <p>
 Самое обидное, что это лицемерное событие восхваляется в&nbsp;официальной газете &laquo;Менделеевец&raquo;. Мы&nbsp;не&nbsp;знаем, от&nbsp;души&nbsp;ли писала Чернявская Татьяна, что 
 </p>
-<div class="quote">
+<div class="quote">&nbsp;
 &nbsp;
 </div>
 <div class="quoting">
@@ -86,7 +86,7 @@ Cui bono? Cui prodest?
 </div>
 и&nbsp;что
 
-<div class="quote">
+<div class="quote">&nbsp;
 &nbsp;
 </div>
 <div class="quoting">

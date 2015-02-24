@@ -1,6 +1,6 @@
 #Цитата
 <div class="quote">
-
+&nbsp;
 </div>
 <div class="quoting">
 

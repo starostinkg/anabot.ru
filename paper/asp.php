@@ -35,7 +35,7 @@ include ROOT . 'inc/header_common.htm';
 <p>
 В&nbsp;этом году экзамены прошли с&nbsp;11&nbsp;по&nbsp;25&nbsp;сентября под лозунгом, что&nbsp;бы меньше бегать от&nbsp;военкомата, но&nbsp;удовольствие надо сказать сомнительное, так как сдать 3&nbsp;экзамена довольно сложно за&nbsp;2&nbsp;недели, если вы&nbsp;конечно не&nbsp;начинали готовиться к&nbsp;ним летом. В&nbsp;результате, собрав все бумажки только к&nbsp;9&nbsp;сентября... Кстати, бумажки следующие:
 </p>
-<div class="quote">
+<div class="quote">&nbsp;
 <span>
 <a href="http://www.muctr.ru/univedu/postgr/">http://www.muctr.ru/univedu/postgr/</a>:</span></div>
 <div class="quoting">
