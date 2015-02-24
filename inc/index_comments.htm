@@ -1,0 +1,55 @@
+?>
+
+
+<?php
+
+function kvak_index_comments() {
+ $ch = 0;
+ $posts = array();
+ $idts = array();
+ $f = 30;
+ $link = mysql_query("SELECT * FROM `posts` WHERE `forum_id`='$f' ORDER BY `post_id` DESC") or errDB($link);
+ while($post = mysql_fetch_assoc($link)) {
+  $link2 = mysql_query("SELECT * FROM `topics` WHERE `topic_id`='" . (int)$post['topic_id'] . "'") or errDB($link);
+  $post2 = mysql_fetch_assoc($link2);
+  if ($post2 ['posts_count'] ==0 || $post2['topic_status'] == 2 || in_array($post['topic_id'], $idts)) continue;
+
+  $idts[] = $post['topic_id'];
+  $idps[] = $post['post_id'];
+  $posts[] = $post['post_text'];
+  $titles[] = $post2['topic_title'];
+  $posters[] = $post['poster_name'];
+  
+  $dt_post = new DateTime($post['post_time']);
+  $dt_post_date = $dt_post->format('d.m.Y');
+  $dt_post_time = $dt_post->format('H:i');
+  $dt_posts[] = $dt_post_date . ' в ' . $dt_post_time . '';
+  
+  $tps[] = $post2['topic_id'];
+  
+  if ($ch++ > 10) break;
+ }
+
+
+ $Tidy = new tidy();
+ $Tidy_config = array('clean' => true, 'show-body-only' => true); 
+ foreach($posts as $id => $post) {
+  $post = strip_tags($post);
+  $post = cutString($post, 300, 0);
+  $title = cutString($titles[$id], 50, 0);
+  $Tidy->parseString($post, $Tidy_config, 'utf8');
+  $post = $Tidy;
+
+  echo '<div style="background:#f0f0f0; width: 90%; font-size:10pt; margin-left:5%;">' . 
+      '<a class="border_right_link" style="font-size:10pt;" href="/kvak/' . $f . '/' . $tps[$id] . '#' . $idps[$id] . '">' . $title . '</a><div style="font-size:4pt">&nbsp;</div>' . $post .
+	   '</div>
+	   <div style=" margin-left:5%; height: 5px; background-image: url(\'/kvak/img/mtail.gif\'); background-repeat: no-repeat;"></div>
+	   <div style=" margin-left:5%; font-size:10pt">' . $posters[$id] . ' (' . $dt_posts[$id] . ') </div><br>';
+ } 
+  
+ }
+
+
+kvak_index_comments();
+?>
+

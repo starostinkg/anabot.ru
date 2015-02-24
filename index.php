@@ -25,11 +25,6 @@ include ROOT . 'inc/header_common.htm';
    <!--hr-->
 <!--Список новостей ("актуально!")-->
 <?php include ROOT . 'components/main/actual.php'; ?>
-   <div class="actual_body">
-   <ul>
-    <?php echo $Data; unset($Data); ?>
-   </ul>
-   </div>
   </td>
   <td class="border_right">
   <!--img src="/img/positive.gif" alt="Позитивые новости" class="img_right_menu">
@@ -73,6 +68,9 @@ include ROOT . 'inc/header_common.htm';
   <div class="border_right_menu">
    <a class="border_right_link" href="/forhack.php">Кулхацкерам</a><br>
   </div>
+  <br class="break">
+
+  <div style="margin-left:-20%;"><hr style="width:90%;"><div align="center">Последние комментарии:</div><hr style="width:90%;"><br><?php include ROOT . 'components/main/Comments.php'; ?></div>
   </td>
  </tr>
  <tr>

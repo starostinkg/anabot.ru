@@ -6,7 +6,7 @@
 
 //$link = json_decode($link);
 
-if (!preg_match('#^/paper/#isU', $_SERVER['SCRIPT_NAME'])) $Data = eval(join(file(ROOT . 'inc/index.htm')));
+if (!preg_match('#^/paper/#isU', $_SERVER['SCRIPT_NAME'])) eval(join(file(ROOT . 'inc/index.htm')));
 
 ///////////////if ((count($link->response) < 2)) $Data = 'Рђ РЅРѕРІРѕСЃС‚РµР№ РїРѕРєР° РЅРµС‚...';
 ///////////////else {

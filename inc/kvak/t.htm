@@ -10,6 +10,7 @@ function kvak_t() {
  $t = $_GET['t'];
  $f = $GLOBALS['f'];
  $p_t = $GLOBALS['pages_on_topic'];
+ if ($f == 30) $p_t = 100500;
  $page = empty($_GET['page']) ? 1 : $_GET['page'];
  if (!empty($_GET['oldpage'])) $page = $_GET['oldpage'] + 1;
 
@@ -72,7 +73,7 @@ function kvak_t() {
   if (strpbrk($f[$_GET['f']]->get_chmods(), 'D')) $delete= ' <a href="./del-' . $post['post_id'] . '">Удалить</a> ';
   ///////if (strpbrk($f[$_GET['f']]->get_chmods(), 'E')) $edit = ' <a href="./edit-' . $post['post_id'] . '">Редактировать</a> ';;
   $footer_kva .= '<div class="comment_kva_box"><div class="avatar" align="right"><div>' . $post['poster_name'] . '</div><div class="vgroup">' . $kva_user->vgroup . '</div>'
-              . '</div><div class="comments_kva">' . '<div class="post_top">Отправлено: ' . $post_time . '<div style="float:right">' . $delete . '</div></div><br>'
+              . '</div><div class="comments_kva">' . '<div class="post_top">Отправлено: ' . $post_time . '<div style="float:right" id="'.$post['post_id'].'">' . $delete . '</div></div><br>'
 			  . $post['post_text'] . '</div></div>';
  }
 

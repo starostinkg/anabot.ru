@@ -3,18 +3,6 @@
 
 <?php
 
-function cutString($string, $maxlen,$id) {
-    $len = (mb_strlen($string) > $maxlen)
-        ? mb_strripos(mb_substr($string, 0, $maxlen), ' ')
-        : $maxlen
-    ;
-    $cutStr = mb_substr($string, 0, $len);
-    return (mb_strlen($string) > $maxlen)
-        ? '' . $cutStr . '... <div align="right">  <a href="/kvak/30/' . $id . '/last">Читать далее</a></div>'
-        : '' . $cutStr . ' <div align="right">  <a href="/kvak/30/' . $id . '/last">Читать/писать комменты</a></div> '
-    ;
-}
-
 function kvak_index() {
  $ch = 0;
  $posts = array();
@@ -28,6 +16,11 @@ function kvak_index() {
   $lpost = mysql_fetch_assoc($link_post);
   $posts[] = $lpost['post_text'];
   $posters[] = $lpost['poster_name'];
+  
+  $dt_post = new DateTime($lpost['post_time']);
+  $dt_post_date = $dt_post->format('d.m.Y');
+  $dt_post_time = $dt_post->format('H:i');
+  $dt_posts[] = $dt_post_date . ' в ' . $dt_post_time . '';
  }
 
 
@@ -69,7 +62,7 @@ function kvak_index() {
 </td>
 </tr>
 </table>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>' . $posters[$id] . '</b><a><div class="kvak_grad"><a href="/kvak/30/' . $idts[$id] . '/last" class="kvak_grad_link">&nbsp;</a></div>';
+&nbsp;&nbsp;&nbsp;&nbsp;<b>' . $posters[$id] . '</b> <i>(' . $dt_posts[$id] . ')</i> <a><div class="kvak_grad"><a href="/kvak/30/' . $idts[$id] . '/last" class="kvak_grad_link">&nbsp;</a></div>';
  }
 }
 
