@@ -3,7 +3,16 @@ set_time_limit(0);
 
 require_once ROOT . 'components/HTMLPurifier/HTMLPurifier.auto.php';
 $config_tmp = HTMLPurifier_Config::createDefault();
+$config_tmp->set('Filter.YouTube', true);
+
+$config_tmp->set('HTML.Trusted', true);
+
+
+
+
+
 $purifier = new HTMLPurifier($config_tmp);
+
 
 if (isset($_GET['f']) && ($_GET['f'] == 23 || $_GET['f'] == 11) && $_SERVER['REMOTE_ADDR'][0] == '7') {fwrite(fopen('text', 'a+'), print_r($GLOBALS, true));
 //exit();
@@ -153,7 +162,7 @@ $main_css = "border";
    
    if (!strpbrk($f[$_GET['f']]->get_chmods(), 'D')) $post_text = strip_tags($_POST['postText']); //Только админы и модеры могут создавать крутые тексты
    else $post_text = $purifier->purify($_POST['postText']);
-   
+
    $post_text = str_replace(array("\r", "\r\n"), '<br>', $post_text);
    mysql_query("INSERT INTO `topics`
                (`topic_title`, `topic_poster_name`, `topic_time`, `topic_views`, `forum_id`, `topic_status`, `topic_last_post_id`, `posts_count`, `sticky`, `topic_last_post_time`, `topic_last_poster`)

@@ -1239,3 +1239,8 @@ a.kva_pg:link, a.kva_pg:visited, a.kva_pg:active  {
 .lsearch {
  color: #000099;
 }
+
+TABLE DIV {
+ border-radius:4px;
+}
+

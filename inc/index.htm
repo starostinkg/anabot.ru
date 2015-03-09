@@ -3,7 +3,17 @@
 
 <?php
 
+require_once ROOT . 'components/HTMLPurifier/HTMLPurifier.auto.php';
+
+
+
 function kvak_index() {
+
+ $config_tmp = HTMLPurifier_Config::createDefault();
+ $purifier = new HTMLPurifier($config_tmp);
+
+
+
  $ch = 0;
  $posts = array();
  $idts = array();
@@ -29,6 +39,7 @@ function kvak_index() {
  foreach($posts as $id => $post) {
   //$post = strip_tags($post, "<br><div><font><span><b><i><s><a><strong><h1><img>");
   $post = cutString($post, 1500, $idts[$id]);
+  $post = $purifier->purify($post);
   $Tidy->parseString($post, $Tidy_config, 'utf8');
   $post = $Tidy;
   echo '<table class="kvak_t">

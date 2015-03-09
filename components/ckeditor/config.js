@@ -25,6 +25,13 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'others' },
 		{ name: 'about' }
 	];
+    
+/*
+config.toolbar = 'MyToolbar'; 
+
+config.toolbar_MyToolbar = [['Bold','Italic', 'Underline', 'doksoft_alert'], ['Save'], ['links']];
+
+*/
 
 	// The default plugins included in the basic setup define some buttons that
 	// are not needed in a basic editor. They are removed here.
@@ -32,6 +39,11 @@ CKEDITOR.editorConfig = function( config ) {
 	// Dialog windows are also simplified.
 	config.removeDialogTabs = '';
     config.removePlugins = '';
-    config.extraPlugins = 'format,image,justify,sourcedialog,colorbutton,preview';
+    config.extraPlugins = 'format,image,justify,sourcedialog,colorbutton,preview,doksoft_alert,youtube';
+    
+
+config.doksoft_alert_use_dialog = true;
+    
     config.disableNativeSpellChecker = false;
 };
+
