@@ -120,9 +120,7 @@ include ROOT . 'inc/header_common.htm';
 
 <br />
 <strong>
-Стеклодув</strong>
-<strong>
--кварцедув</strong>
+Стеклодув-кварцедув</strong>
 </p>
 <p>
 Напоследок скажу пару слов про стеклодува. 
