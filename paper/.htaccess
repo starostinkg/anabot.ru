@@ -18,6 +18,32 @@ RewriteCond %{QUERY_STRING} ^$
 RewriteRule ^PAXTnasosy1g.php$ /paper/21/165  [R=301]
 RewriteRule ^21/165/?$ /paper/PAXTnasosy1g.php?f=21&t=165 [L]
 
+#Пахт: О центробежных насосах, или как не учить картинки
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^PAXTnasosy2g.php$ /paper/30/649  [R=301]
+RewriteRule ^30/649/?$ /paper/PAXTnasosy2g.php?f=30&t=649 [L]
+
+#Как расставлять ссылки в литобзоре при помощи Word 2007
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^Ssylki_v_litobzore.php$ /paper/30/638  [R=301]
+RewriteRule ^30/638/?$ /paper/Ssylki_v_litobzore.php?f=30&t=638 [L]
+
+#Mendeley — быстрый старт студентам и молодым ученым
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^Mendeley.php$ /paper/30/640  [R=301]
+RewriteRule ^30/640/?$ /paper/Mendeley.php?f=30&t=640 [L]
+
+#Где все купить?
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^GgeKupit.php$ /paper/30/643  [R=301]
+RewriteRule ^30/643/?$ /paper/GgeKupit.php?f=30&t=643 [L]
+
+# Оформление Excel-графиков. Выпавшие точки.
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^Excel1.php$ /paper/30/642  [R=301]
+RewriteRule ^30/642/?$ /paper/Excel1.php?f=30&t=642 [L]
+
+
 #Пахт: о поршневых и плунжерных насосах: велосипедный насос
 RewriteCond %{QUERY_STRING} ^$
 RewriteRule ^PAXTnasosy1_2g.php$ /paper/21/170  [R=301]
