@@ -41,8 +41,7 @@ include ROOT . 'inc/header_common.htm';
 </p>
 <p>
 Это многим известный <a href="http://www.labteh.com/price.html">
-ЛабТех</a>
-. 
+ЛабТех</a>. 
 Имеется <a href="http://www.labteh.com/price.html">
 неплохой поиск</a>
 по&nbsp;сайту. 
@@ -56,8 +55,7 @@ include ROOT . 'inc/header_common.htm';
 </p>
 <p>
 Конечно, я&nbsp;говорю о&nbsp;легендарном <a href="http://rushim.ru/">
-РусХиме</a>
-. 
+РусХиме</a>. 
 Также имеется поиск по&nbsp;сайту на&nbsp;главной странице (ну&nbsp;это... 
 заходите на&nbsp;сайт и&nbsp;начинаете крутить колесо мыши, пока одометр не&nbsp;покажет пару километров). 
 Предварительный заказ делать бессмысленно&nbsp;&mdash; на&nbsp;него обычно кладется болт :) В&nbsp;лучшем случае, отпишутся, что товар есть в&nbsp;наличии.</p>
@@ -85,14 +83,11 @@ include ROOT . 'inc/header_common.htm';
 </p>
 <p>
 В&nbsp;розницу и&nbsp;недорого сухой лет продается, например, в <a href="http://suhled.ucoz.ru">
-Амарко-сервис</a>
-. 
+Амарко-сервис</a>. 
 Схема проезда <a href="http://suhled.ucoz.ru/index/skhema_proezda/0-22">
-тут (верхняя карта)</a>
-. 
+тут (верхняя карта)</a>. 
 Актуальные <a href="https://vk.com/suhled">
-цены&nbsp;&mdash; тут</a>
-. 
+цены&nbsp;&mdash; тут</a>. 
 Шаговая доступность от&nbsp;метро Полежаевская. 
 При себе иметь паспорт.</p>
 <p>
