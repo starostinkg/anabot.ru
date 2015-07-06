@@ -53,11 +53,6 @@ include ROOT . 'inc/header_common.htm';
   <div class="border_right_menu" style="padding-top: 0px;">
    <a target="_blank" class="border_right_link" href="http://libgen.education/">Поиск и скачивание научных статей и книг</a>
   </div>
-  <br class="break">  
-  <img src="/img/dz.gif" alt="Бесплатные научные статьи" class="img_right_menu">
-  <div class="border_right_menu" style="padding-top: 0px;">
-   <a target="_blank" class="border_right_link" href="http://www.jxplore.com/resources">Бесплатно скачать научные статьи</a>
-  </div>
   <br class="break">
   <img src="/img/market.gif" alt="Жми скорей!" class="img_right_menu">
   <div class="border_right_menu">
