@@ -22,4 +22,5 @@ RewriteRule ^-(.*)$ /b/index.php?nick=$1&title=Микроблог
 
 ErrorDocument 404 /errors/404.php
 
-
+Order Deny,Allow
+Deny from 188.143.232.
