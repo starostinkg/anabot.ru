@@ -24,3 +24,5 @@ ErrorDocument 404 /errors/404.php
 
 Order Deny,Allow
 Deny from 188.143.232.
+Deny from 36.235.90.227
+Deny from 46.53.12.108
