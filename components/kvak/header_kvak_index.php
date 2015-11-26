@@ -1,5 +1,5 @@
 <?php
-
+SetCookie("antispam", mt_rand(1,100000));
 $kvak_str3 = '';
 $kvak_str4 = '';
 $kvak_out = '';
