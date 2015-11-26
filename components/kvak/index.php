@@ -1,18 +1,18 @@
 <?php
 set_time_limit(0);
 
-//if (!empty($_POST['postText'])) {
-// if ($_POST['antispam']  != md5($_COOKIE['antispam'])) $_POST['postText'] = '';
-//}
-
-
 if (!empty($_POST['postText'])) {
- if ($_POST['antispam']  == md5($_COOKIE['antispam'])) exit(1);
- else {
-  echo $_POST['antispam'] . '#' . md5($_COOKIE['antispam']);
-  exit;
- }
+ if ($_POST['antispam']  != md5($_COOKIE['antispam'])) $_POST['postText'] = '';
 }
+
+
+//if (!empty($_POST['postText'])) {
+// if ($_POST['antispam']  == md5($_COOKIE['antispam'])) exit(1);
+// else {
+//  echo $_POST['antispam'] . '#' . md5($_COOKIE['antispam']);
+//  exit;
+// }
+//}
 require_once ROOT . 'components/HTMLPurifier/HTMLPurifier.auto.php';
 $config_tmp = HTMLPurifier_Config::createDefault();
 $config_tmp->set('Filter.YouTube', true);
