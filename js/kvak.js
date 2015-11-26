@@ -13,8 +13,8 @@ function kvak() {
   if (h.search("112") != "-1") kvak_grads[i].style.top = '-119px';
  }
  
- if (document.forms[0].antispam) {
-  document.forms[0].antispam.value=md5(getCookie("antispam"));
+ if (document.forms['kva_form'].antispam) {
+  document.forms['kva_form'].antispam.value=md5(getCookie("antispam"));
  }
  
  firstpost = document.getElementById("first_post");
