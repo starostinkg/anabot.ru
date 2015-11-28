@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+$rand_tmp = mt_rand(1,100000);
+SetCookie("antispam", $rand_tmp, 0, "/paper/");
+SetCookie("antispam", $rand_tmp, 0, "/kvak/");
+
+?><!DOCTYPE html>
 <html>
  <!-- header -->
  <?php require_once $header_path; #/conf/main_conf.php ?>

@@ -11,6 +11,12 @@ function trimTxt(s) {
  return s;
 }
 
+function paper() {
+ if (document.forms['paper_form'].antispam) {
+  document.forms['paper_form'].antispam.value=md5(getCookie("antispam"));
+ }
+}
+
 function submitForm(){
  var pf = document.forms['postMsg'];
  var ftitle = false,  ftext = false,  flogin = false,  fpass = false,  user_usr = '',  user_pwd = '',  topicTitle = '',  postText = '',  fsubmit = true;
