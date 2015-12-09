@@ -2,7 +2,7 @@
 set_time_limit(0);
 
 if (!empty($_POST['postText'])) {
- if ($_POST['antispam']  != md5($_COOKIE['antispam'])) $_POST['postText'] = '';
+ if (empty($_POST['TitleTheme']) && $_POST['antispam']  != md5($_COOKIE['antispam'])) $_POST['postText'] = '';
 }
 
 
