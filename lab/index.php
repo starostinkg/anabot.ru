@@ -18,6 +18,7 @@ include ROOT . 'inc/header_common.htm';
 
 <div class="lab_info">
  <img src="/lab/img/info.gif" class="w100" alt="">
+  <div style="position:absolute; bottom:4%; left:12px;"><a href="http://we.easyelectronics.ru/page/Konkurs" target="_blank"><img src="http://easyelectronics.ru/img/konkurs/konkurs.gif" alt="Конкурс на лучшую статью"></a></div>
 </div>
 <div class="lab_info_text">
  <div class="ul_lab">
