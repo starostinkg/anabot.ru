@@ -21,8 +21,12 @@ RewriteRule ^note/?$ https://mobislenotes.com/app/ [R=301,L]
 RewriteRule ^-(.*)$ /b/index.php?nick=$1&title=Микроблог
 
 ErrorDocument 404 /errors/404.php
+ErrorDocument 403 https://vk.com/anabotru?z=photo-758006_397407499%2Falbum-758006_00%2Frev
 
-Order Deny,Allow
-Deny from 188.143.232.
-Deny from 36.235.90.227
-Deny from 46.53.12.108
+
+#Order Deny,Allow
+#Order Allow,Deny
+#Deny from 188.143.232.
+#Deny from 36.235.90.227
+#Deny from 46.53.12.108
+#Allow from 91.79.232.61
