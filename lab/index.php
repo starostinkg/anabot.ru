@@ -30,7 +30,7 @@ include ROOT . 'inc/header_common.htm';
  </div>
  <br>
  <div class="li_lab" style="background-image: url('/lab/img/li.php?id=2');">
-  <span class="menu_lab">&nbsp;<a href="http://www.dpva.info/" class="menu_lab" target="_blank">Инженерные справочники</a> &mdash; соседнее здание&nbsp;</span>
+  <span class="menu_lab">&nbsp;<a href="http://www.dpva.ru/" class="menu_lab" target="_blank">Инженерные справочники</a> &mdash; соседнее здание&nbsp;</span>
  </div>
  <br>
  <div class="li_lab" style="background-image: url('/lab/img/li.php?id=3');">
