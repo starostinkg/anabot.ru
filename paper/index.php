@@ -42,6 +42,7 @@ include ROOT . 'inc/header_common.htm';
  <ul>
   <li><a href="/paper/1/401">Аспирантура в РХТУ:</a> миф или кривые руки?
   <li><a href="/paper/1/1">ПСЖ, академ, отчисление:</a> кратко о главном
+  <li><a href="/paper/IstorijaOdnogoOtchislenija.php">История одного отчисления </a>
  </ul>
 <br>
 <li class="lab">В наших лабораториях...
