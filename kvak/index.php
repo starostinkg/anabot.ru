@@ -13,7 +13,7 @@ include ROOT . 'inc/header_common.htm';
 <div class="kvak_head" <?php echo empty($align_topic) ? '' : $align_topic; ?>><?php echo empty($forum_top) ? '' : $forum_top; echo empty($kvak_pages) ? '&nbsp;' : $kvak_pages; ?></div>
 <!--Список КВА -->
 
-<table class="table_actual kva">
+<table class="table_actual kva" style="max-width: 1200px">
  <tr>
   <td class="border_left_top">
    <div class="actual_title" id="actual_title">

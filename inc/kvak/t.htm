@@ -72,14 +72,14 @@ function kvak_t() {
   
   if (strpbrk($f[$_GET['f']]->get_chmods(), 'D')) $delete= ' <a href="./del-' . $post['post_id'] . '">Удалить</a> ';
   ///////if (strpbrk($f[$_GET['f']]->get_chmods(), 'E')) $edit = ' <a href="./edit-' . $post['post_id'] . '">Редактировать</a> ';;
-  $footer_kva .= '<div class="comment_kva_box"><div class="avatar" align="right"><div>' . $post['poster_name'] . '</div><div class="vgroup">' . $kva_user->vgroup . '</div>'
-              . '</div><div class="comments_kva">' . '<div class="post_top">Отправлено: ' . $post_time . '<div style="float:right" id="'.$post['post_id'].'">' . $delete . '</div></div><br>'
+  $footer_kva .= '<div class="comment_kva_box" ><div class="avatar" align="right"><div>' . $post['poster_name'] . '</div><div class="vgroup">' . $kva_user->vgroup . '</div>'
+              . '</div><div class="comments_kva" style="max-width:1200px;">' . '<div class="post_top">Отправлено: ' . $post_time . '<div style="float:right" id="'.$post['post_id'].'">' . $delete . '</div></div><br>'
 			  . $post['post_text'] . '</div></div>';
  }
 
  if (strpbrk($f[$_GET['f']]->get_chmods(), 'w')) {
-  $footer_kva .= '<div class="comment_kva_box"><div class="avatar" align="right"><div>' . $GLOBALS['user'] . '</div><div class="vgroup">' . $f[$_GET['f']]->vgroup . '</div>'
-              . '</div><div class="comments_kva">' . '<div class="post_top">Ваш комментарий:</div><br>
+  $footer_kva .= '<div class="comment_kva_box" ><div class="avatar" align="right"><div>' . $GLOBALS['user'] . '</div><div class="vgroup">' . $f[$_GET['f']]->vgroup . '</div>'
+              . '</div><div class="comments_kva" style="max-width:1200px;">' . '<div class="post_top">Ваш комментарий:</div><br>
 			  <form method="post" class="formStyle" action="." name="kva_form">
      <input type="hidden" name="antispam">
 			   <textarea name="postText" class="postText" cols="1" rows="1"></textarea><br>
