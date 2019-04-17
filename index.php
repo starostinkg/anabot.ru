@@ -36,7 +36,7 @@ include ROOT . 'inc/header_common.htm';
 
   <img src="/img/vk.gif" alt="Анабот Вконтакте" class="img_right_menu">
   <div class="border_right_menu">
-   <a class="border_right_link" href="http://vkontakte.ru/club758006">Мы Вконтакте</a>
+   <a class="border_right_link" href="https://vk.com/anabotru">Мы Вконтакте</a>
   </div>
   <br class="break">
   <img src="/img/sci-hub.gif" alt="Бесплатные научные статьи" class="img_right_menu">
