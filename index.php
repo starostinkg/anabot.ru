@@ -5,6 +5,18 @@ include ROOT . 'conf/main_conf.php';
 include ROOT . 'inc/header_common.htm';
 ?>
 
+
+
+    <link rel="stylesheet" href="player/build/mediaelementplayer.css">
+
+    <script src="player/build/mediaelement-and-player.js"></script>
+    <script src="player/build/ajax.js"></script>
+    <script src="player/build/lang/ru.js"></script>
+
+    <script src="player/demo.js"></script>
+
+
+
 <script type="text/javascript" src="/js/lab.js"></script>
 
 
@@ -34,6 +46,14 @@ include ROOT . 'inc/header_common.htm';
   </div>
   <br class="break"-->
 
+
+
+  <div class="border_right_menu" style="width: 200px"><div style="background-color:#EEEEEE; padding: 5px;" id="anabot_play_text"></div>
+   <audio id="anabot_play" class="anabot_play" preload="none" controls style="max-width:100%;">
+     <source src="player/music/001.mp3" type="audio/mp3">
+   </audio>
+  </div>
+  <br class="break">
   <img src="/img/vk.gif" alt="Анабот Вконтакте" class="img_right_menu">
   <div class="border_right_menu">
    <a class="border_right_link" href="https://vk.com/anabotru">Мы Вконтакте</a>
@@ -79,3 +99,7 @@ include ROOT . 'inc/header_common.htm';
 <div class="footer_ie">&nbsp;</div>
 <!-- footer -->
 <?php include ROOT . 'inc/footer_common.htm'; ?>
+
+<script>
+play_next('stop');
+</script>
